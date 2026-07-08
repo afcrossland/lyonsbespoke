@@ -246,6 +246,18 @@ p { margin: 0 0 1rem; }
 .work-card__body p { color: var(--muted); font-size: .95rem; margin: 0; }
 .work-card__more { display:inline-flex; align-items:center; gap:.4em; margin-top:14px; font-weight:600; color: var(--oak-dark); font-size:.95rem; }
 
+/* Vertically-stacked project cards (image left, text right) */
+.work-list { display: grid; grid-template-columns: 1fr; gap: 24px; max-width: 940px; margin-inline: auto; }
+.work-list .work-card { display: grid; grid-template-columns: 1.05fr 1fr; align-items: stretch; }
+.work-list .work-card__img { aspect-ratio: auto; }
+.work-list .work-card__img img { height: 100%; min-height: 220px; }
+.work-list .work-card__body { align-self: center; padding: 30px 36px; }
+@media (max-width: 640px) {
+  .work-list .work-card { grid-template-columns: 1fr; }
+  .work-list .work-card__img { aspect-ratio: 3/2; }
+  .work-list .work-card__img img { min-height: 0; }
+}
+
 /* Stacked gallery (one project per row) */
 .gallery.gallery--stack { grid-template-columns: 1fr; max-width: 840px; margin-inline: auto; gap: 26px; }
 .gallery--stack .tile { aspect-ratio: auto; cursor: zoom-in; }
