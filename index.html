@@ -293,59 +293,45 @@
       <div class="section-head center reveal">
         <span class="eyebrow">Follow Us</span>
         <h2>See our latest work on social</h2>
-        <p class="lead">We share recent projects, progress shots and finished results over on Instagram and Facebook. Give us a follow.</p>
+        <p class="lead">We share recent projects, progress shots and finished results on Instagram and Facebook. Swipe through and give us a follow.</p>
+        <div class="social-follow">
+          <a href="https://www.instagram.com/lyonsbespoke/" class="btn btn--primary" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            @lyonsbespoke
+          </a>
+          <a href="https://www.facebook.com/61568991250123" class="btn btn--ghost" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg>
+            Lyons Bespoke
+          </a>
+        </div>
       </div>
 
-      <div class="social-grid reveal">
+      <!-- ===================== LIVE SOCIAL FEED (widget-ready) =====================
+           The swipeable carousel below shows recent project photos and works now.
 
-        <!-- ============================ INSTAGRAM ============================
-             This grid shows a hand-picked selection now, and works out of the box.
-
-             TO SHOW A LIVE, AUTO-UPDATING INSTAGRAM FEED (recommended, free):
-             1. Sign up at https://behold.so (or https://lightwidget.com), connect
-                the @lyonsbespoke account and create a feed/widget.
-             2. Copy the two snippet lines they give you.
-             3. Delete the <div class="ig-grid">…</div> block below and paste the
-                snippet in its place. Behold looks like:
-                  <script type="module" src="https://w.behold.so/widget.js"></script>
-                  <behold-widget feed-id="YOUR_FEED_ID"></behold-widget>
-             ================================================================= -->
-        <div>
-          <div class="social-col__head">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-            <span class="social-col__handle">@lyonsbespoke</span>
-            <a href="https://www.instagram.com/lyonsbespoke/" class="btn btn--primary" target="_blank" rel="noopener">Follow</a>
-          </div>
-          <div class="ig-grid">
-            <a href="https://www.instagram.com/lyonsbespoke/" target="_blank" rel="noopener" aria-label="View on Instagram"><img src="assets/img/kitchens/kitchens-1.jpeg" alt="Recent kitchen project" loading="lazy"></a>
-            <a href="https://www.instagram.com/lyonsbespoke/" target="_blank" rel="noopener" aria-label="View on Instagram"><img src="assets/img/bathrooms/bathrooms-7.jpeg" alt="Recent bathroom project" loading="lazy"></a>
-            <a href="https://www.instagram.com/lyonsbespoke/" target="_blank" rel="noopener" aria-label="View on Instagram"><img src="assets/img/roofing/roofing-4.jpeg" alt="Recent building project" loading="lazy"></a>
-            <a href="https://www.instagram.com/lyonsbespoke/" target="_blank" rel="noopener" aria-label="View on Instagram"><img src="assets/img/kitchens/kitchens-2.jpeg" alt="Recent kitchen project" loading="lazy"></a>
-            <a href="https://www.instagram.com/lyonsbespoke/" target="_blank" rel="noopener" aria-label="View on Instagram"><img src="assets/img/bathrooms/bathrooms-2.jpeg" alt="Recent bathroom project" loading="lazy"></a>
-            <a href="https://www.instagram.com/lyonsbespoke/" target="_blank" rel="noopener" aria-label="View on Instagram"><img src="assets/img/roofing/roofing-10.jpeg" alt="Recent conservatory roof project" loading="lazy"></a>
-          </div>
+           TO SHOW A LIVE, AUTO-UPDATING INSTAGRAM + FACEBOOK CAROUSEL (free):
+           1. Create a free account at https://elfsight.com (or https://embedsocial.com).
+           2. Build a "Social Feed" widget, connect BOTH @lyonsbespoke (Instagram) and
+              the Lyons Bespoke Facebook page, and choose the "Slider / Carousel" layout.
+           3. Copy the embed snippet and paste it in place of the whole
+              <div class="slider" …>…</div> block below. Elfsight looks like:
+                <script src="https://static.elfsight.com/platform/platform.js" async></script>
+                <div class="elfsight-app-XXXX" data-elfsight-app-lazy></div>
+           ========================================================================== -->
+      <div class="slider reveal" data-slider>
+        <button class="slider__btn slider__prev" data-slider-prev aria-label="Previous posts">&#8249;</button>
+        <div class="slider__track" data-slider-track>
+          <a class="slide" href="https://www.instagram.com/lyonsbespoke/" target="_blank" rel="noopener"><img src="assets/img/kitchens/kitchens-1.jpeg" alt="Modern fitted kitchen" loading="lazy"><span class="slide__cap">Modern fitted kitchen</span></a>
+          <a class="slide" href="https://www.instagram.com/lyonsbespoke/" target="_blank" rel="noopener"><img src="assets/img/bathrooms/bathrooms-7.jpeg" alt="Wood-panelled bathroom" loading="lazy"><span class="slide__cap">Wood-panelled bathroom</span></a>
+          <a class="slide" href="https://www.instagram.com/lyonsbespoke/" target="_blank" rel="noopener"><img src="assets/img/roofing/roofing-4.jpeg" alt="Garden pergola and patio" loading="lazy"><span class="slide__cap">Pergola &amp; patio</span></a>
+          <a class="slide" href="https://www.instagram.com/lyonsbespoke/" target="_blank" rel="noopener"><img src="assets/img/kitchens/kitchens-2.jpeg" alt="Handleless grey kitchen" loading="lazy"><span class="slide__cap">Handleless grey kitchen</span></a>
+          <a class="slide" href="https://www.instagram.com/lyonsbespoke/" target="_blank" rel="noopener"><img src="assets/img/bathrooms/bathrooms-2.jpeg" alt="Walk-in shower" loading="lazy"><span class="slide__cap">Walk-in shower</span></a>
+          <a class="slide" href="https://www.instagram.com/lyonsbespoke/" target="_blank" rel="noopener"><img src="assets/img/roofing/roofing-10.jpeg" alt="Insulated conservatory roof" loading="lazy"><span class="slide__cap">Insulated conservatory roof</span></a>
+          <a class="slide" href="https://www.instagram.com/lyonsbespoke/" target="_blank" rel="noopener"><img src="assets/img/bathrooms/bathrooms-5.jpeg" alt="Fitted shower enclosure" loading="lazy"><span class="slide__cap">Fitted shower enclosure</span></a>
+          <a class="slide" href="https://www.instagram.com/lyonsbespoke/" target="_blank" rel="noopener"><img src="assets/img/roofing/roofing-9.jpeg" alt="New felt roof" loading="lazy"><span class="slide__cap">New felt roof</span></a>
         </div>
-
-        <!-- ============================ FACEBOOK =============================
-             Official Facebook Page Plugin — shows recent posts and auto-updates.
-             Uses the page's numeric id (61568991250123); the /people/… profile
-             URL does NOT work with the plugin.
-             ================================================================= -->
-        <div>
-          <div class="social-col__head">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg>
-            <span class="social-col__handle">Lyons Bespoke</span>
-            <a href="https://www.facebook.com/61568991250123" class="btn btn--primary" target="_blank" rel="noopener">Follow</a>
-          </div>
-          <div class="fb-embed">
-            <iframe title="Lyons Bespoke on Facebook"
-              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F61568991250123&tabs=timeline&width=500&height=640&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
-              width="500" height="640" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-              allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-              loading="lazy"></iframe>
-          </div>
-        </div>
-
+        <button class="slider__btn slider__next" data-slider-next aria-label="Next posts">&#8250;</button>
+        <div class="slider__dots" data-slider-dots aria-hidden="true"></div>
       </div>
     </div>
   </section>

@@ -80,6 +80,61 @@
     });
   }
 
+  /* ---- Swipeable sliders (arrows + native touch/trackpad swipe + dots) ---- */
+  document.querySelectorAll("[data-slider]").forEach(function (slider) {
+    var track = slider.querySelector("[data-slider-track]");
+    if (!track) return;
+    var prev = slider.querySelector("[data-slider-prev]");
+    var next = slider.querySelector("[data-slider-next]");
+    var dotsWrap = slider.querySelector("[data-slider-dots]");
+    var slides = track.querySelectorAll(".slide");
+
+    function step() {
+      var s = track.querySelector(".slide");
+      if (!s) return track.clientWidth;
+      var gap = parseFloat(getComputedStyle(track).columnGap || "18") || 18;
+      return s.getBoundingClientRect().width + gap;
+    }
+    function perView() { return Math.max(1, Math.round(track.clientWidth / step())); }
+
+    // Build dots (one per "page")
+    if (dotsWrap && slides.length) {
+      var pages = Math.max(1, Math.ceil(slides.length / perView()));
+      dotsWrap.innerHTML = "";
+      for (var p = 0; p < pages; p++) {
+        (function (p) {
+          var b = document.createElement("button");
+          b.type = "button";
+          b.setAttribute("aria-label", "Go to slide group " + (p + 1));
+          b.addEventListener("click", function () {
+            track.scrollTo({ left: p * perView() * step(), behavior: "smooth" });
+          });
+          dotsWrap.appendChild(b);
+        })(p);
+      }
+    }
+
+    function update() {
+      var max = track.scrollWidth - track.clientWidth - 2;
+      if (prev) prev.disabled = track.scrollLeft <= 2;
+      if (next) next.disabled = track.scrollLeft >= max;
+      if (dotsWrap) {
+        var dots = dotsWrap.children;
+        var idx = Math.round(track.scrollLeft / (perView() * step()));
+        for (var i = 0; i < dots.length; i++) {
+          dots[i].classList.toggle("is-active", i === idx);
+        }
+      }
+    }
+
+    if (prev) prev.addEventListener("click", function () { track.scrollBy({ left: -track.clientWidth * 0.9, behavior: "smooth" }); });
+    if (next) next.addEventListener("click", function () { track.scrollBy({ left: track.clientWidth * 0.9, behavior: "smooth" }); });
+    var raf;
+    track.addEventListener("scroll", function () { cancelAnimationFrame(raf); raf = requestAnimationFrame(update); }, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+  });
+
   /* ---- Footer year ---- */
   var y = document.querySelector("[data-year]");
   if (y) y.textContent = new Date().getFullYear();

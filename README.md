@@ -61,27 +61,31 @@ The form on `contact.html` is ready for [Formspree](https://formspree.io) (free 
 
 Until then, the phone, WhatsApp and email links all work with no setup.
 
-## Social feeds (Instagram + Facebook)
+## Social feed (Instagram + Facebook)
 
-The home page has a **"Follow Us"** section with two columns.
+The home page **"Follow Us"** section has Follow buttons for both accounts and a
+**swipeable carousel** (arrows on desktop, swipe on touch/trackpad). Out of the
+box the carousel shows a hand-picked set of project photos — always works, no
+scripts.
 
-**Facebook** uses Meta's official *Page Plugin* — it shows recent posts and
-**updates automatically**, no account or key needed. It points at the page's
-numeric id (`https://www.facebook.com/61568991250123`); the `/people/…` profile
-URL does **not** work with the plugin.
+To make it a **live, auto-updating Instagram + Facebook feed** as a swipeable
+slider (free):
 
-**Instagram** currently shows a hand-picked grid of your own photos (always works,
-no scripts). To turn it into a **live, auto-updating feed** (free):
+1. Create an account at **[elfsight.com](https://elfsight.com)** *(recommended)*
+   or **[embedsocial.com](https://embedsocial.com)**.
+2. Build a **"Social Feed"** widget, connect **both** `@lyonsbespoke` (Instagram)
+   **and** the Lyons Bespoke Facebook page, and choose the **Slider / Carousel**
+   layout.
+3. Copy the embed snippet and paste it in `index.html` in place of the whole
+   `<div class="slider" …>…</div>` block (find the `LIVE SOCIAL FEED` comment).
+   Elfsight looks like:
+   ```html
+   <script src="https://static.elfsight.com/platform/platform.js" async></script>
+   <div class="elfsight-app-XXXX" data-elfsight-app-lazy></div>
+   ```
 
-1. Sign up at **[behold.so](https://behold.so)** *(recommended)* or
-   **[lightwidget.com](https://lightwidget.com)** and connect **@lyonsbespoke**.
-2. Create a feed and copy the snippet they give you (e.g. for Behold:
-   `<script type="module" src="https://w.behold.so/widget.js"></script>` and
-   `<behold-widget feed-id="YOUR_FEED_ID"></behold-widget>`).
-3. In `index.html`, find the `INSTAGRAM` comment block, delete the
-   `<div class="ig-grid">…</div>` and paste your snippet in its place.
-
-Both providers have free tiers (usually with a small provider credit on free plans).
+Free tiers usually carry a small provider credit. The Facebook **page id** is
+`61568991250123` and the Instagram handle is `@lyonsbespoke`.
 
 ## Google reviews (filtered to 4★ and above)
 
