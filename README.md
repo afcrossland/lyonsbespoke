@@ -63,29 +63,31 @@ Until then, the phone, WhatsApp and email links all work with no setup.
 
 ## Social feed (Instagram + Facebook)
 
-The home page **"Follow Us"** section has Follow buttons for both accounts and a
-**swipeable carousel** (arrows on desktop, swipe on touch/trackpad). Out of the
-box the carousel shows a hand-picked set of project photos — always works, no
-scripts.
+The home page **"Follow Us"** section has two parts:
 
-To make it a **live, auto-updating Instagram + Facebook feed** as a swipeable
-slider (free):
+**Facebook — LIVE.** Meta's official Page Plugin shows your real, auto-updating
+posts with no account or key. It uses the page's numeric id
+(`https://www.facebook.com/61568991250123`); the `/people/…` profile URL does
+**not** work with the plugin.
+
+**Instagram — PREVIEW.** The swipeable slider currently shows placeholder project
+photos (labelled "Preview"), because Instagram blocks unauthenticated access, so
+real posts can't be read automatically. To show your **real, auto-updating
+Instagram posts** in that same slider (free):
 
 1. Create an account at **[elfsight.com](https://elfsight.com)** *(recommended)*
-   or **[embedsocial.com](https://embedsocial.com)**.
-2. Build a **"Social Feed"** widget, connect **both** `@lyonsbespoke` (Instagram)
-   **and** the Lyons Bespoke Facebook page, and choose the **Slider / Carousel**
-   layout.
-3. Copy the embed snippet and paste it in `index.html` in place of the whole
-   `<div class="slider" …>…</div>` block (find the `LIVE SOCIAL FEED` comment).
-   Elfsight looks like:
+   or **[behold.so](https://behold.so)** and connect **@lyonsbespoke**.
+2. Build the feed/widget and copy its embed snippet, e.g. Elfsight:
    ```html
    <script src="https://static.elfsight.com/platform/platform.js" async></script>
    <div class="elfsight-app-XXXX" data-elfsight-app-lazy></div>
    ```
+3. In `index.html`, find the `INSTAGRAM (preview only)` comment and replace the
+   whole `<div class="slider" …>…</div>` block with your snippet.
 
-Free tiers usually carry a small provider credit. The Facebook **page id** is
-`61568991250123` and the Instagram handle is `@lyonsbespoke`.
+Tip: an Elfsight **"Social Feed"** widget can combine Instagram **and** Facebook
+into one slider if you'd prefer a single connected feed. Free tiers usually carry
+a small provider credit.
 
 ## Google reviews (filtered to 4★ and above)
 
