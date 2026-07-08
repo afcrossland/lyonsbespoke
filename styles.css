@@ -135,6 +135,9 @@ p { margin: 0 0 1rem; }
   color: var(--text);
 }
 .nav__links a:hover, .nav__links a.is-active { color: var(--ink); background: var(--cream); }
+/* The in-list CTA is only for the mobile menu; on desktop the nav__cta button is used */
+.nav__links .btn { display: none; }
+.nav__links .btn:hover { background: var(--oak-dark); color: #fff; }
 .nav__cta { display: flex; align-items: center; gap: 12px; }
 .nav__toggle {
   display: none; background: none; border: 0; cursor: pointer; padding: 8px;
@@ -243,6 +246,12 @@ p { margin: 0 0 1rem; }
 .work-card__body p { color: var(--muted); font-size: .95rem; margin: 0; }
 .work-card__more { display:inline-flex; align-items:center; gap:.4em; margin-top:14px; font-weight:600; color: var(--oak-dark); font-size:.95rem; }
 
+/* Stacked gallery (one project per row) */
+.gallery.gallery--stack { grid-template-columns: 1fr; max-width: 840px; margin-inline: auto; gap: 26px; }
+.gallery--stack .tile { aspect-ratio: auto; cursor: zoom-in; }
+.gallery--stack .tile img { height: auto; }
+.gallery--stack .tile__cap { opacity: 1; transform: none; padding: 40px 22px 18px; font-size: 1rem; }
+
 /* ---------- Testimonials ---------- */
 .quotes { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
 .quote {
@@ -255,6 +264,14 @@ p { margin: 0 0 1rem; }
 .quote__who { margin-top: auto; font-size: .92rem; }
 .quote__who strong { color: var(--ink); display: block; }
 .quote__who span { color: var(--muted); }
+
+/* Google reviews badge + widget container */
+.google-badge { display: inline-flex; align-items: center; gap: 10px; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: .6em 1.25em; box-shadow: var(--shadow-sm); font-weight: 600; color: var(--ink); margin-top: 8px; }
+a.google-badge:hover { border-color: var(--ink); color: var(--ink); transform: translateY(-2px); box-shadow: var(--shadow-md); transition: all .2s var(--ease); }
+.google-badge svg { flex-shrink: 0; }
+.google-badge__stars { color: #fbbc04; letter-spacing: 1px; }
+.google-badge__arrow { color: var(--muted); }
+.reviews-widget { margin-top: 8px; }
 
 /* ---------- Social feeds ---------- */
 .social-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: clamp(28px, 4vw, 52px); align-items: start; }

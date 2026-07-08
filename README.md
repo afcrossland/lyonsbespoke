@@ -83,6 +83,29 @@ no scripts). To turn it into a **live, auto-updating feed** (free):
 
 Both providers have free tiers (usually with a small provider credit on free plans).
 
+## Google reviews (filtered to 4★ and above)
+
+The home page has a **Reviews** section with a Google badge. It shows a few
+hand-picked testimonials by default. To make it a **live, auto-updating Google
+Reviews feed showing only 4★-and-above** ratings (free):
+
+1. Sign up at **[featurable.com](https://featurable.com)** *(recommended — free,
+   no watermark)* or **[elfsight.com](https://elfsight.com)** /
+   **[trustindex.io](https://www.trustindex.io)**.
+2. Connect your **Google Business Profile**, and in the widget settings set the
+   **minimum rating / filter to "4 stars and above"**.
+3. Copy the widget snippet, e.g. Featurable:
+   ```html
+   <div id="featurable-XXXX" data-featurable-async></div>
+   <script src="https://featurable.com/assets/js/widget.js" async></script>
+   ```
+4. In `index.html`, find the `GOOGLE REVIEWS` comment block and replace the
+   `<div class="quotes reviews-widget">…</div>` with your snippet.
+
+Also update the two Google links in that section (the badge and the button) —
+currently a Google **search** link — with your exact Google review/profile URL
+once you have it.
+
 ## Editing content
 
 - **Text**: edit the `.html` files directly — everything is plain, commented HTML.
