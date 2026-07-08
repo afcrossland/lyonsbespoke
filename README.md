@@ -17,7 +17,6 @@ styles.css         All styling (brand: espresso #3c2015 on cream #f5f0e8)
 main.js            Mobile nav, scroll reveal, gallery lightbox
 favicon.svg        Site icon
 assets/img/…       Project photos (kitchens / bathrooms / roofing / brand)
-CNAME              Custom domain for GitHub Pages
 sitemap.xml, robots.txt
 ```
 
@@ -40,15 +39,18 @@ python3 -m http.server 8000
    ```
 2. In the repo: **Settings → Pages → Build and deployment**
    → Source: **Deploy from a branch** → Branch: **main** / **/ (root)** → Save.
-3. Point the domain: at your DNS provider add
-   - a `CNAME` record for `www` → `<you>.github.io`
+   The site will be live at `https://<you>.github.io/lyonsbespoke/`.
+3. **When you're ready to move the domain off Wix** (do this only when you want to
+   switch the live site over):
+   - In **Settings → Pages → Custom domain**, enter `www.lyonsbespoke.com` and Save
+     (this creates a `CNAME` file automatically).
+   - At your DNS provider add a `CNAME` record for `www` → `<you>.github.io`
    - (optional) apex `lyonsbespoke.com` → GitHub Pages A records
      (185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153)
-   The `CNAME` file in this repo already sets `www.lyonsbespoke.com`.
-4. Back in **Settings → Pages**, tick **Enforce HTTPS** once the certificate is issued.
+   - Back in **Settings → Pages**, tick **Enforce HTTPS** once the certificate is issued.
 
-> Because the current site is on Wix, you'll change the DNS records at your domain
-> registrar. Do this only when you're ready to switch the live site over.
+> All asset paths are relative, so the site works both at the `github.io/lyonsbespoke/`
+> URL and at the root domain — no changes needed when you switch.
 
 ## Make the contact form send emails
 
