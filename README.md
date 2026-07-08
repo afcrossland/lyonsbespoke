@@ -66,9 +66,9 @@ Until then, the phone, WhatsApp and email links all work with no setup.
 The home page has a **"Follow Us"** section with two columns.
 
 **Facebook** uses Meta's official *Page Plugin* — it shows recent posts and
-**updates automatically**, no account or key needed. If posts don't show, edit the
-`iframe` `src` in `index.html` and swap the `href` for the numeric page URL
-`https://www.facebook.com/61568991250123` (URL-encoded).
+**updates automatically**, no account or key needed. It points at the page's
+numeric id (`https://www.facebook.com/61568991250123`); the `/people/…` profile
+URL does **not** work with the plugin.
 
 **Instagram** currently shows a hand-picked grid of your own photos (always works,
 no scripts). To turn it into a **live, auto-updating feed** (free):
