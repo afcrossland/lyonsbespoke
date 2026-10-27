@@ -1,6 +1,61 @@
-/* Lyons Bespoke — mobile nav, scroll reveal, gallery lightbox */
+/* Lyons Bespoke — nav, scroll-spy, reveal, lightbox, review + Instagram embeds */
 (function () {
   "use strict";
+
+  /* ---- Site config: edit these two to switch on the live embeds ----
+     featurableId   : widget id from featurable.com (Google reviews, set min rating to 4★)
+     instagramPosts : full URLs of Instagram posts/reels to show, newest first,
+                      e.g. "https://www.instagram.com/p/AbCdEfGhIjK/"            */
+  var CONFIG = {
+    featurableId: "",
+    beholdFeedUrl: "",     // e.g. "https://feeds.behold.so/XXXX" — shows your latest 5 Instagram posts
+    instagramPosts: []     // optional: specific post URLs to embed instead
+  };
+
+  function loadScript(src) {
+    var s = document.createElement("script");
+    s.src = src; s.async = true; document.body.appendChild(s);
+  }
+
+  /* ---- Google reviews (Featurable) ---- */
+  var reviews = document.querySelector("[data-reviews]");
+  if (reviews && CONFIG.featurableId) {
+    reviews.innerHTML = '<div id="featurable-' + CONFIG.featurableId + '" data-featurable-async></div>';
+    loadScript("https://featurable.com/assets/bundle.js");
+  }
+
+  /* ---- Instagram post embeds ---- */
+  var ig = document.querySelector("[data-instagram]");
+  if (ig && CONFIG.beholdFeedUrl) {
+    fetch(CONFIG.beholdFeedUrl).then(function (r) { return r.json(); }).then(function (data) {
+      var posts = (data.posts || data || []).slice(0, 5);
+      if (!posts.length) return;
+      ig.innerHTML = "";
+      posts.forEach(function (p) {
+        var sz = (p.sizes && (p.sizes.medium || p.sizes.large)) || {};
+        var img = sz.mediaUrl || p.thumbnailUrl || p.mediaUrl;
+        var a = document.createElement("a");
+        a.className = "ig-post"; a.href = p.permalink; a.target = "_blank"; a.rel = "noopener";
+        var im = document.createElement("img");
+        im.src = img; im.loading = "lazy"; im.alt = (p.caption || "Instagram post").slice(0, 120);
+        a.appendChild(im);
+        if (p.caption) { var c = document.createElement("span"); c.className = "ig-post__cap"; c.textContent = p.caption; a.appendChild(c); }
+        ig.appendChild(a);
+      });
+    }).catch(function () { /* keep the follow link */ });
+  } else if (ig && CONFIG.instagramPosts.length) {
+    ig.innerHTML = ""; ig.className = "ig-grid";
+    CONFIG.instagramPosts.forEach(function (url) {
+      var bq = document.createElement("blockquote");
+      bq.className = "instagram-media";
+      bq.setAttribute("data-instgrm-permalink", url);
+      bq.setAttribute("data-instgrm-version", "14");
+      var a = document.createElement("a");
+      a.href = url; a.target = "_blank"; a.rel = "noopener"; a.textContent = "View this post on Instagram";
+      bq.appendChild(a); ig.appendChild(bq);
+    });
+    loadScript("https://www.instagram.com/embed.js");
+  }
 
   /* ---- Mobile navigation ---- */
   var header = document.querySelector(".site-header");
@@ -80,60 +135,26 @@
     });
   }
 
-  /* ---- Swipeable sliders (arrows + native touch/trackpad swipe + dots) ---- */
-  document.querySelectorAll("[data-slider]").forEach(function (slider) {
-    var track = slider.querySelector("[data-slider-track]");
-    if (!track) return;
-    var prev = slider.querySelector("[data-slider-prev]");
-    var next = slider.querySelector("[data-slider-next]");
-    var dotsWrap = slider.querySelector("[data-slider-dots]");
-    var slides = track.querySelectorAll(".slide");
-
-    function step() {
-      var s = track.querySelector(".slide");
-      if (!s) return track.clientWidth;
-      var gap = parseFloat(getComputedStyle(track).columnGap || "18") || 18;
-      return s.getBoundingClientRect().width + gap;
-    }
-    function perView() { return Math.max(1, Math.round(track.clientWidth / step())); }
-
-    // Build dots (one per "page")
-    if (dotsWrap && slides.length) {
-      var pages = Math.max(1, Math.ceil(slides.length / perView()));
-      dotsWrap.innerHTML = "";
-      for (var p = 0; p < pages; p++) {
-        (function (p) {
-          var b = document.createElement("button");
-          b.type = "button";
-          b.setAttribute("aria-label", "Go to slide group " + (p + 1));
-          b.addEventListener("click", function () {
-            track.scrollTo({ left: p * perView() * step(), behavior: "smooth" });
-          });
-          dotsWrap.appendChild(b);
-        })(p);
-      }
-    }
-
-    function update() {
-      var max = track.scrollWidth - track.clientWidth - 2;
-      if (prev) prev.disabled = track.scrollLeft <= 2;
-      if (next) next.disabled = track.scrollLeft >= max;
-      if (dotsWrap) {
-        var dots = dotsWrap.children;
-        var idx = Math.round(track.scrollLeft / (perView() * step()));
-        for (var i = 0; i < dots.length; i++) {
-          dots[i].classList.toggle("is-active", i === idx);
-        }
-      }
-    }
-
-    if (prev) prev.addEventListener("click", function () { track.scrollBy({ left: -track.clientWidth * 0.9, behavior: "smooth" }); });
-    if (next) next.addEventListener("click", function () { track.scrollBy({ left: track.clientWidth * 0.9, behavior: "smooth" }); });
-    var raf;
-    track.addEventListener("scroll", function () { cancelAnimationFrame(raf); raf = requestAnimationFrame(update); }, { passive: true });
-    window.addEventListener("resize", update);
-    update();
-  });
+  /* ---- Evolving header: condense on scroll, highlight current section, progress bar ---- */
+  var links = Array.prototype.slice.call(document.querySelectorAll('.nav__links a[href^="#"]:not(.btn)'));
+  var sections = links.map(function (a) { return document.querySelector(a.getAttribute("href")); });
+  var bar = document.querySelector(".scroll-progress span");
+  var ticking = false;
+  function onScroll() {
+    ticking = false;
+    var y = window.scrollY;
+    if (header) header.classList.toggle("is-scrolled", y > 40);
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar && max > 0) bar.style.transform = "scaleX(" + Math.min(1, y / max) + ")";
+    var probe = y + window.innerHeight * 0.35, active = -1;
+    sections.forEach(function (s, i) { if (s && s.offsetTop <= probe) active = i; });
+    // "About"/band sit between Services and Kitchens; the last link wins at page bottom
+    if (window.innerHeight + y >= document.documentElement.scrollHeight - 4) active = links.length - 1;
+    links.forEach(function (a, i) { a.classList.toggle("is-active", i === active); });
+  }
+  window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  window.addEventListener("resize", onScroll);
+  onScroll();
 
   /* ---- Footer year ---- */
   var y = document.querySelector("[data-year]");

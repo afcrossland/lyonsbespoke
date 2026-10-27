@@ -7,11 +7,7 @@ free on GitHub Pages with the custom domain `www.lyonsbespoke.com`.
 ## Structure
 
 ```
-index.html         Home
-kitchens.html      Kitchens gallery
-bathrooms.html     Bathrooms gallery
-roofing.html       Roofing & building gallery
-contact.html       Contact + enquiry form
+index.html         The whole site: one scrolling page
 404.html           Not-found page
 styles.css         All styling (brand: espresso #3c2015 on cream #f5f0e8)
 main.js            Mobile nav, scroll reveal, gallery lightbox
@@ -54,71 +50,49 @@ python3 -m http.server 8000
 
 ## Make the contact form send emails
 
-The form on `contact.html` is ready for [Formspree](https://formspree.io) (free tier):
+The form in the `#contact` section of `index.html` is ready for [Formspree](https://formspree.io) (free tier):
 
 1. Sign up, create a form, copy its endpoint (e.g. `https://formspree.io/f/abcdwxyz`).
-2. In `contact.html`, replace `YOUR_FORM_ID` in the `<form action="…">` with your ID.
+2. Replace `YOUR_FORM_ID` in the `<form action="…">` with your ID.
 
 Until then, the phone, WhatsApp and email links all work with no setup.
 
-## Social feed (Instagram + Facebook)
+## Embedding Instagram, Facebook and Google reviews
 
-The home page **"Follow Us"** section has two parts:
+The site is a single page (`index.html`). The two live embeds are switched on in
+one place — the `CONFIG` block at the top of `main.js`:
 
-**Facebook — LIVE.** Meta's official Page Plugin shows your real, auto-updating
-posts with no account or key. It uses the page's numeric id
-(`https://www.facebook.com/61568991250123`); the `/people/…` profile URL does
-**not** work with the plugin.
+```js
+var CONFIG = {
+  featurableId: "",      // Google reviews widget id from featurable.com
+  instagramPosts: []     // e.g. ["https://www.instagram.com/p/AbCdEfGhIjK/"]
+};
+```
 
-**Instagram — PREVIEW.** The swipeable slider currently shows placeholder project
-photos (labelled "Preview"), because Instagram blocks unauthenticated access, so
-real posts can't be read automatically. To show your **real, auto-updating
-Instagram posts** in that same slider (free):
+**Instagram.** Open a post on instagram.com, copy its address-bar URL (works for
+`/p/…` posts and `/reel/…`), and add it to `instagramPosts`. They render with
+Instagram's official embed, no account or key needed. Add new URLs at the top to
+show your newest work first.
 
-1. Create an account at **[elfsight.com](https://elfsight.com)** *(recommended)*
-   or **[behold.so](https://behold.so)** and connect **@lyonsbespoke**.
-2. Build the feed/widget and copy its embed snippet, e.g. Elfsight:
-   ```html
-   <script src="https://static.elfsight.com/platform/platform.js" async></script>
-   <div class="elfsight-app-XXXX" data-elfsight-app-lazy></div>
-   ```
-3. In `index.html`, find the `INSTAGRAM (preview only)` comment and replace the
-   whole `<div class="slider" …>…</div>` block with your snippet.
+**Google reviews (4★ and above).** Sign up at [featurable.com](https://featurable.com),
+connect your Google Business Profile, set the widget's minimum rating to
+4 stars, then paste the widget id into `featurableId`. (Elfsight / Trustindex also
+work: paste their snippet into the `data-reviews` div in `index.html`.) Until an id
+is set, the section shows a link to your Google reviews. Update the Google link in
+that section to your exact review URL once you have it.
 
-Tip: an Elfsight **"Social Feed"** widget can combine Instagram **and** Facebook
-into one slider if you'd prefer a single connected feed. Free tiers usually carry
-a small provider credit.
-
-## Google reviews (filtered to 4★ and above)
-
-The home page has a **Reviews** section with a Google badge. It shows a few
-hand-picked testimonials by default. To make it a **live, auto-updating Google
-Reviews feed showing only 4★-and-above** ratings (free):
-
-1. Sign up at **[featurable.com](https://featurable.com)** *(recommended — free,
-   no watermark)* or **[elfsight.com](https://elfsight.com)** /
-   **[trustindex.io](https://www.trustindex.io)**.
-2. Connect your **Google Business Profile**, and in the widget settings set the
-   **minimum rating / filter to "4 stars and above"**.
-3. Copy the widget snippet, e.g. Featurable:
-   ```html
-   <div id="featurable-XXXX" data-featurable-async></div>
-   <script src="https://featurable.com/assets/js/widget.js" async></script>
-   ```
-4. In `index.html`, find the `GOOGLE REVIEWS` comment block and replace the
-   `<div class="quotes reviews-widget">…</div>` with your snippet.
-
-Also update the two Google links in that section (the badge and the button) —
-currently a Google **search** link — with your exact Google review/profile URL
-once you have it.
+**Facebook — LIVE.** Meta's official Page Plugin shows your real posts using the
+page's numeric id (`61568991250123`); the `/people/…` URL does **not** work.
 
 ## Editing content
 
-- **Text**: edit the `.html` files directly — everything is plain, commented HTML.
-- **Photos**: drop new images into `assets/img/<category>/` and update the
-  `src` / `data-full` paths in the relevant gallery page.
+- **Text**: edit `index.html` directly — it's plain, commented HTML.
+- **Photos**: drop new images into `assets/img/<category>/` and add a `<button class="tile">`
+  to the matching gallery (`#kitchens`, `#bathrooms`, `#roofing`). Galleries are
+  masonry, so photos of any shape display uncropped; click opens the lightbox.
+- **Menu**: nav links are `#section-id` anchors; the active one follows your scroll.
 - **Colours & fonts**: change the CSS variables at the top of `styles.css`.
-- **Contact details / social links**: search the HTML for the phone number
-  `07547 415968` or `drrnlyons@gmail.com` to update everywhere.
+- **Contact details / social links**: search the HTML for `07547 415968` or
+  `drrnlyons@gmail.com` to update everywhere.
 
 All photography and branding © Lyons Bespoke Kitchens & Bathrooms.

@@ -36,35 +36,32 @@
 </head>
 <body>
 
-  <!-- ============ HEADER ============ -->
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="index.html" aria-label="Lyons Bespoke home">
-        <span class="brand__mark">L</span>
-        <span class="brand__text">
-          <span class="brand__name">LYONS</span>
-          <span class="brand__tag">Bespoke · Kitchens · Bathrooms</span>
-        </span>
-      </a>
+      <a class="brand" href="#top" aria-label="Lyons Bespoke home"><img class="brand__logo" src="assets/img/brand/logo.png" alt="Lyons Bespoke — Kitchens &amp; Bathrooms" width="310" height="105"></a>
       <nav aria-label="Primary">
         <ul class="nav__links">
-          <li><a href="index.html" class="is-active">Home</a></li>
-          <li><a href="kitchens.html">Kitchens</a></li>
-          <li><a href="bathrooms.html">Bathrooms</a></li>
-          <li><a href="roofing.html">Roofing &amp; Building</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="contact.html" class="btn btn--primary">Request a Quote</a></li>
+          <li><a href="#social">Latest</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#kitchens">Kitchens</a></li>
+          <li><a href="#bathrooms">Bathrooms</a></li>
+          <li><a href="#joinery">Joinery</a></li>
+          <li><a href="#roofing">Roofing</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact" class="btn btn--primary">Request a Quote</a></li>
         </ul>
       </nav>
       <div class="nav__cta">
-        <a href="contact.html" class="btn btn--primary">Request a Quote</a>
-        <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav"><span></span></button>
+        <a href="#contact" class="btn btn--primary">Request a Quote</a>
+        <button class="nav__toggle" aria-label="Menu" aria-expanded="false"><span></span></button>
       </div>
     </div>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
   </header>
 
   <!-- ============ HERO ============ -->
-  <section class="hero">
+  <section class="hero" id="top">
     <div class="hero__media">
       <img src="assets/img/kitchens/kitchens-1.jpeg" alt="A modern fitted kitchen completed by Lyons Bespoke" fetchpriority="high">
     </div>
@@ -74,9 +71,14 @@
         <h1>Bespoke kitchens, bathrooms &amp; joinery, built to last.</h1>
         <p class="hero__sub">Reliable local craftsmanship for homeowners across the Midlands &amp; South Yorkshire. Building the future, restoring the past.</p>
         <div class="hero__actions">
-          <a href="contact.html" class="btn btn--oak">Request a Free Quote</a>
-          <a href="#work" class="btn btn--outline-light">View Our Work</a>
+          <a href="#contact" class="btn btn--oak">Request a Free Quote</a>
+          <a href="#kitchens" class="btn btn--outline-light">View Our Work</a>
         </div>
+        <a class="google-badge google-badge--hero" href="https://www.google.com/search?q=Lyons+Bespoke+Kitchens+and+Bathrooms+Retford" target="_blank" rel="noopener" aria-label="Rated 5 stars on Google">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.8-2.4 3.6v3h3.9c2.3-2.1 3.7-5.2 3.7-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 5.9-1.1 7.8-2.9l-3.9-3c-1.1.7-2.5 1.2-3.9 1.2-3 0-5.6-2-6.5-4.8H1.5v3.1C3.4 21.4 7.4 24 12 24z"/><path fill="#FBBC05" d="M5.5 14.5c-.2-.7-.4-1.4-.4-2.5s.2-1.8.4-2.5V6.4H1.5C.5 8.1 0 10 0 12s.5 3.9 1.5 5.6l4-3.1z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.4.6 4.6 1.8l3.5-3.5C17.9 1.2 15.2 0 12 0 7.4 0 3.4 2.6 1.5 6.4l4 3.1C6.4 6.7 9 4.8 12 4.8z"/></svg>
+          <span class="google-badge__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span>5.0 on Google</span>
+        </a>
       </div>
     </div>
     <div class="container">
@@ -89,8 +91,48 @@
     </div>
   </section>
 
+  <!-- ============ SOCIAL ============ -->
+  <section class="section section--cream" id="social" data-spy>
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Follow Us</span>
+        <h2>Our latest work</h2>
+        <p class="lead">Recent projects, progress shots and finished results on Instagram and Facebook.</p>
+        <div class="social-follow">
+          <a href="https://www.instagram.com/lyonsbespoke/" class="btn btn--primary" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> @lyonsbespoke</a>
+          <a href="https://www.facebook.com/61568991250123" class="btn btn--ghost" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg> Lyons Bespoke</a>
+        </div>
+      </div>
+
+      <!-- Instagram: latest 5 posts. Set beholdFeedUrl in main.js (see README). -->
+      <div class="feed-label reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>Instagram</span></div>
+      <div class="ig-strip" data-instagram>
+        <a class="ig-empty" href="https://www.instagram.com/lyonsbespoke/" target="_blank" rel="noopener">See our latest posts on Instagram @lyonsbespoke &#8594;</a>
+      </div>
+
+      <!-- ===================== FACEBOOK (live) =====================
+           Official Page Plugin — your real, auto-updating Facebook posts.
+           Uses the page's numeric id (61568991250123).
+           ========================================================== -->
+      <div class="fb-live reveal">
+        <div class="feed-label">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg>
+          <span>Facebook</span>
+          <em class="is-live">Live posts</em>
+        </div>
+        <div class="fb-embed">
+          <iframe title="Latest posts from Lyons Bespoke on Facebook"
+            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F61568991250123&tabs=timeline&width=500&height=680&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+            width="500" height="680" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+            allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ SERVICES ============ -->
-  <section class="section" id="services">
+  <section class="section" id="services" data-spy>
     <div class="container">
       <div class="section-head center reveal">
         <span class="eyebrow">Our Services</span>
@@ -143,7 +185,7 @@
   </section>
 
   <!-- ============ FEATURE / WHY ============ -->
-  <section class="section section--cream">
+  <section class="section section--cream" id="about">
     <div class="container">
       <div class="split">
         <div class="split__media reveal">
@@ -171,7 +213,7 @@
               <span><strong>Tidy as we go</strong>We respect your space and leave it clean at the end of every day.</span>
             </li>
           </ul>
-          <p style="margin-top:1.75rem"><a href="contact.html" class="btn btn--primary">Start Your Project</a></p>
+          <p style="margin-top:1.75rem"><a href="#contact" class="btn btn--primary">Start Your Project</a></p>
         </div>
       </div>
     </div>
@@ -201,158 +243,421 @@
     </div>
   </section>
 
-  <!-- ============ FEATURED WORK ============ -->
-  <section class="section" id="work">
+  <!-- ============ KITCHENS ============ -->
+  <section class="section" id="kitchens" data-spy>
     <div class="container">
       <div class="section-head center reveal">
-        <span class="eyebrow">Our Work</span>
-        <h2>Recent projects</h2>
-        <p class="lead">A look at some of the kitchens, bathrooms and building work we've completed for local homeowners.</p>
+        <span class="eyebrow">Kitchens</span>
+        <h2>Bespoke fitted kitchens</h2>
+        <p class="lead">From full strip-outs to the final coat of paint — kitchens fitted, tested and ready to enjoy. Every unit measured and finished with care.</p>
       </div>
-      <div class="work-list">
-        <a class="work-card reveal" href="kitchens.html">
-          <div class="work-card__img"><img src="assets/img/kitchens/kitchens-2.jpeg" alt="Modern grey fitted kitchen"></div>
-          <div class="work-card__body">
-            <h3>Kitchens</h3>
-            <p>Full fits from strip-out to finish, tested and ready to enjoy.</p>
-            <span class="work-card__more">View kitchens &#8594;</span>
-          </div>
-        </a>
-        <a class="work-card reveal" href="bathrooms.html">
-          <div class="work-card__img"><img src="assets/img/bathrooms/bathrooms-2.jpeg" alt="Walk-in shower bathroom renovation"></div>
-          <div class="work-card__body">
-            <h3>Bathrooms</h3>
-            <p>Showers, wet rooms and full renovations, tiled and finished with care.</p>
-            <span class="work-card__more">View bathrooms &#8594;</span>
-          </div>
-        </a>
-        <a class="work-card reveal" href="roofing.html">
-          <div class="work-card__img"><img src="assets/img/roofing/roofing-9.jpeg" alt="Roofing and building project"></div>
-          <div class="work-card__body">
-            <h3>Roofing &amp; Building</h3>
-            <p>Roofs, pergolas, shopfronts and structural work built to last.</p>
-            <span class="work-card__more">View building work &#8594;</span>
-          </div>
-        </a>
+      <div class="masonry reveal">
+        <button class="tile" data-lightbox data-full="assets/img/kitchens/kitchens-1.jpeg" data-cap="Fitted &amp; ready to enjoy">
+          <img src="assets/img/kitchens/kitchens-1.jpeg" alt="Completed modern grey fitted kitchen" loading="lazy">
+          <span class="tile__cap">Fitted &amp; ready to enjoy</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/kitchens/kitchens-2.jpeg" data-cap="White goods fitted &amp; tested">
+          <img src="assets/img/kitchens/kitchens-2.jpeg" alt="Grey kitchen with integrated appliances fitted and tested" loading="lazy">
+          <span class="tile__cap">White goods fitted &amp; tested</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/kitchens/kitchens-3.jpeg" data-cap="In build">
+          <img src="assets/img/kitchens/kitchens-3.jpeg" alt="Kitchen installation in progress" loading="lazy">
+          <span class="tile__cap">In build</span>
+        </button>
+      </div>
+      <div class="job reveal">
+        <h3 class="job-title">Navy handleless kitchen<span>Oak flooring &amp; quartz worktops</span></h3>
+        <div class="masonry">
+        <button class="tile" data-lightbox data-full="assets/img/jobs/navy-kitchen-1.jpg" data-cap="Navy handleless kitchen">
+          <img src="assets/img/jobs/navy-kitchen-1.jpg" alt="Navy handleless fitted kitchen with oak floor" loading="lazy">
+          <span class="tile__cap">Navy handleless kitchen</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/navy-kitchen-2.jpg" data-cap="Navy handleless kitchen">
+          <img src="assets/img/jobs/navy-kitchen-2.jpg" alt="Navy handleless fitted kitchen with oak floor" loading="lazy">
+          <span class="tile__cap">Navy handleless kitchen</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/navy-kitchen-3.jpg" data-cap="Navy handleless kitchen">
+          <img src="assets/img/jobs/navy-kitchen-3.jpg" alt="Navy handleless fitted kitchen with oak floor" loading="lazy">
+          <span class="tile__cap">Navy handleless kitchen</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/navy-kitchen-4.jpg" data-cap="Navy handleless kitchen">
+          <img src="assets/img/jobs/navy-kitchen-4.jpg" alt="Navy handleless fitted kitchen with oak floor" loading="lazy">
+          <span class="tile__cap">Navy handleless kitchen</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/navy-kitchen-5.jpg" data-cap="Navy handleless kitchen">
+          <img src="assets/img/jobs/navy-kitchen-5.jpg" alt="Navy handleless fitted kitchen with oak floor" loading="lazy">
+          <span class="tile__cap">Navy handleless kitchen</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/navy-kitchen-6.jpg" data-cap="Navy handleless kitchen">
+          <img src="assets/img/jobs/navy-kitchen-6.jpg" alt="Navy handleless fitted kitchen with oak floor" loading="lazy">
+          <span class="tile__cap">Navy handleless kitchen</span>
+        </button>
+        </div>
+      </div>
+      <div class="job reveal">
+        <h3 class="job-title">Deep teal shaker kitchen<span>Marble-effect splashback &amp; brass handles</span></h3>
+        <div class="masonry">
+        <button class="tile" data-lightbox data-full="assets/img/jobs/teal-kitchen-1.jpg" data-cap="Deep teal shaker kitchen">
+          <img src="assets/img/jobs/teal-kitchen-1.jpg" alt="Deep teal shaker kitchen with marble splashback" loading="lazy">
+          <span class="tile__cap">Deep teal shaker kitchen</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/teal-kitchen-2.jpg" data-cap="Deep teal shaker kitchen">
+          <img src="assets/img/jobs/teal-kitchen-2.jpg" alt="Deep teal shaker kitchen with marble splashback" loading="lazy">
+          <span class="tile__cap">Deep teal shaker kitchen</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/teal-kitchen-3.jpg" data-cap="Deep teal shaker kitchen">
+          <img src="assets/img/jobs/teal-kitchen-3.jpg" alt="Deep teal shaker kitchen with marble splashback" loading="lazy">
+          <span class="tile__cap">Deep teal shaker kitchen</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/teal-kitchen-4.jpg" data-cap="Deep teal shaker kitchen">
+          <img src="assets/img/jobs/teal-kitchen-4.jpg" alt="Deep teal shaker kitchen with marble splashback" loading="lazy">
+          <span class="tile__cap">Deep teal shaker kitchen</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/teal-kitchen-5.jpg" data-cap="Deep teal shaker kitchen">
+          <img src="assets/img/jobs/teal-kitchen-5.jpg" alt="Deep teal shaker kitchen with marble splashback" loading="lazy">
+          <span class="tile__cap">Deep teal shaker kitchen</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/teal-kitchen-6.jpg" data-cap="Deep teal shaker kitchen">
+          <img src="assets/img/jobs/teal-kitchen-6.jpg" alt="Deep teal shaker kitchen with marble splashback" loading="lazy">
+          <span class="tile__cap">Deep teal shaker kitchen</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/teal-kitchen-7.jpg" data-cap="Deep teal shaker kitchen">
+          <img src="assets/img/jobs/teal-kitchen-7.jpg" alt="Deep teal shaker kitchen with marble splashback" loading="lazy">
+          <span class="tile__cap">Deep teal shaker kitchen</span>
+        </button>
+        </div>
+      </div>
+      <div class="job reveal">
+        <h3 class="job-title">Cream handleless kitchen<span>Granite-effect worktops &amp; tall larder units</span></h3>
+        <div class="masonry">
+        <button class="tile" data-lightbox data-full="assets/img/jobs/cream-kitchen-1.jpg" data-cap="Cream handleless kitchen">
+          <img src="assets/img/jobs/cream-kitchen-1.jpg" alt="Cream handleless kitchen with granite-effect worktop" loading="lazy">
+          <span class="tile__cap">Cream handleless kitchen</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/cream-kitchen-2.jpg" data-cap="Cream handleless kitchen">
+          <img src="assets/img/jobs/cream-kitchen-2.jpg" alt="Cream handleless kitchen with granite-effect worktop" loading="lazy">
+          <span class="tile__cap">Cream handleless kitchen</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/cream-kitchen-3.jpg" data-cap="Cream handleless kitchen">
+          <img src="assets/img/jobs/cream-kitchen-3.jpg" alt="Cream handleless kitchen with granite-effect worktop" loading="lazy">
+          <span class="tile__cap">Cream handleless kitchen</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/cream-kitchen-4.jpg" data-cap="Cream handleless kitchen">
+          <img src="assets/img/jobs/cream-kitchen-4.jpg" alt="Cream handleless kitchen with granite-effect worktop" loading="lazy">
+          <span class="tile__cap">Cream handleless kitchen</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/cream-kitchen-5.jpg" data-cap="Cream handleless kitchen">
+          <img src="assets/img/jobs/cream-kitchen-5.jpg" alt="Cream handleless kitchen with granite-effect worktop" loading="lazy">
+          <span class="tile__cap">Cream handleless kitchen</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/cream-kitchen-6.jpg" data-cap="Cream handleless kitchen">
+          <img src="assets/img/jobs/cream-kitchen-6.jpg" alt="Cream handleless kitchen with granite-effect worktop" loading="lazy">
+          <span class="tile__cap">Cream handleless kitchen</span>
+        </button>
+        </div>
+      </div>
+      <div class="job reveal">
+        <h3 class="job-title">Grey shaker kitchen<span>Tiled floor &amp; stone worktops</span></h3>
+        <div class="masonry">
+        <button class="tile" data-lightbox data-full="assets/img/jobs/grey-kitchen-1.jpg" data-cap="Grey shaker kitchen">
+          <img src="assets/img/jobs/grey-kitchen-1.jpg" alt="Grey shaker kitchen with tiled floor" loading="lazy">
+          <span class="tile__cap">Grey shaker kitchen</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/grey-kitchen-2.jpg" data-cap="Grey shaker kitchen">
+          <img src="assets/img/jobs/grey-kitchen-2.jpg" alt="Grey shaker kitchen with tiled floor" loading="lazy">
+          <span class="tile__cap">Grey shaker kitchen</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/grey-kitchen-3.jpg" data-cap="Grey shaker kitchen">
+          <img src="assets/img/jobs/grey-kitchen-3.jpg" alt="Grey shaker kitchen with tiled floor" loading="lazy">
+          <span class="tile__cap">Grey shaker kitchen</span>
+        </button>
+        </div>
+      </div>
+      <div class="job reveal">
+        <h3 class="job-title">White kitchen &amp; utility<span>Oak flooring, integrated appliances</span></h3>
+        <div class="masonry">
+        <button class="tile" data-lightbox data-full="assets/img/jobs/white-kitchen-1.jpg" data-cap="White kitchen &amp; utility">
+          <img src="assets/img/jobs/white-kitchen-1.jpg" alt="White fitted kitchen with oak floor" loading="lazy">
+          <span class="tile__cap">White kitchen &amp; utility</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/white-kitchen-2.jpg" data-cap="White kitchen &amp; utility">
+          <img src="assets/img/jobs/white-kitchen-2.jpg" alt="White fitted kitchen with oak floor" loading="lazy">
+          <span class="tile__cap">White kitchen &amp; utility</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/white-kitchen-3.jpg" data-cap="White kitchen &amp; utility">
+          <img src="assets/img/jobs/white-kitchen-3.jpg" alt="White fitted kitchen with oak floor" loading="lazy">
+          <span class="tile__cap">White kitchen &amp; utility</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/white-kitchen-4.jpg" data-cap="White kitchen &amp; utility">
+          <img src="assets/img/jobs/white-kitchen-4.jpg" alt="White fitted kitchen with oak floor" loading="lazy">
+          <span class="tile__cap">White kitchen &amp; utility</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/white-kitchen-5.jpg" data-cap="White kitchen &amp; utility">
+          <img src="assets/img/jobs/white-kitchen-5.jpg" alt="White fitted kitchen with oak floor" loading="lazy">
+          <span class="tile__cap">White kitchen &amp; utility</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/white-kitchen-6.jpg" data-cap="White kitchen &amp; utility">
+          <img src="assets/img/jobs/white-kitchen-6.jpg" alt="White fitted kitchen with oak floor" loading="lazy">
+          <span class="tile__cap">White kitchen &amp; utility</span>
+        </button>
+        </div>
+      </div>
+      <div class="job reveal">
+        <h3 class="job-title">Stone shaker kitchen<span>Oak worktops &amp; new flooring</span></h3>
+        <div class="masonry">
+        <button class="tile" data-lightbox data-full="assets/img/jobs/shaker-kitchen-1.jpg" data-cap="Stone shaker kitchen">
+          <img src="assets/img/jobs/shaker-kitchen-1.jpg" alt="Stone shaker kitchen with oak worktop" loading="lazy">
+          <span class="tile__cap">Stone shaker kitchen</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/shaker-kitchen-2.jpg" data-cap="Stone shaker kitchen">
+          <img src="assets/img/jobs/shaker-kitchen-2.jpg" alt="Stone shaker kitchen with oak worktop" loading="lazy">
+          <span class="tile__cap">Stone shaker kitchen</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/shaker-kitchen-3.jpg" data-cap="Stone shaker kitchen">
+          <img src="assets/img/jobs/shaker-kitchen-3.jpg" alt="Stone shaker kitchen with oak worktop" loading="lazy">
+          <span class="tile__cap">Stone shaker kitchen</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/shaker-kitchen-4.jpg" data-cap="Stone shaker kitchen">
+          <img src="assets/img/jobs/shaker-kitchen-4.jpg" alt="Stone shaker kitchen with oak worktop" loading="lazy">
+          <span class="tile__cap">Stone shaker kitchen</span>
+        </button>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ TESTIMONIALS ============ -->
-  <section class="section section--cream">
+  <!-- ============ BATHROOMS ============ -->
+  <section class="section section--cream" id="bathrooms" data-spy>
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Bathrooms</span>
+        <h2>Bathrooms, wet rooms &amp; showers</h2>
+        <p class="lead">Full renovations handled start to finish — strip-out, boarding, tiling, plumbing and fitting — for a clean, comfortable finish that lasts.</p>
+      </div>
+      <div class="masonry reveal">
+        <button class="tile" data-lightbox data-full="assets/img/bathrooms/bathrooms-7.jpeg" data-cap="Wood-panelled bathroom, fully fitted">
+          <img src="assets/img/bathrooms/bathrooms-7.jpeg" alt="Warm wood-panelled bathroom with freestanding bath" loading="lazy">
+          <span class="tile__cap">Wood-panelled bathroom, fully fitted</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/bathrooms/bathrooms-2.jpeg" data-cap="Walk-in shower with grey tiling">
+          <img src="assets/img/bathrooms/bathrooms-2.jpeg" alt="Walk-in shower with grey tiling and glass screen" loading="lazy">
+          <span class="tile__cap">Walk-in shower with grey tiling</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/bathrooms/bathrooms-6.jpeg" data-cap="Fitted shower with rainfall head">
+          <img src="assets/img/bathrooms/bathrooms-6.jpeg" alt="White-tiled shower enclosure with rainfall shower head" loading="lazy">
+          <span class="tile__cap">Fitted shower with rainfall head</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/bathrooms/bathrooms-5.jpeg" data-cap="Sliding-door shower enclosure">
+          <img src="assets/img/bathrooms/bathrooms-5.jpeg" alt="Teal bathroom with sliding-door shower enclosure" loading="lazy">
+          <span class="tile__cap">Sliding-door shower enclosure</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/bathrooms/bathrooms-4.jpeg" data-cap="Fitted cloakroom">
+          <img src="assets/img/bathrooms/bathrooms-4.jpeg" alt="Teal cloakroom with toilet, basin and heated towel rail" loading="lazy">
+          <span class="tile__cap">Fitted cloakroom</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/bathrooms/bathrooms-1.jpeg" data-cap="Strip-out, ready to rebuild">
+          <img src="assets/img/bathrooms/bathrooms-1.jpeg" alt="Bathroom stripped back to brick before renovation" loading="lazy">
+          <span class="tile__cap">Strip-out, ready to rebuild</span>
+        </button>
+      </div>
+      <div class="job reveal">
+        <h3 class="job-title">Herringbone bathroom &amp; shower<span>Marble-effect shower, oak vanity</span></h3>
+        <div class="masonry">
+        <button class="tile" data-lightbox data-full="assets/img/jobs/bathroom-herringbone-1.jpg" data-cap="Herringbone bathroom &amp; shower">
+          <img src="assets/img/jobs/bathroom-herringbone-1.jpg" alt="Bathroom with herringbone floor and marble-effect shower" loading="lazy">
+          <span class="tile__cap">Herringbone bathroom &amp; shower</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/bathroom-herringbone-2.jpg" data-cap="Herringbone bathroom &amp; shower">
+          <img src="assets/img/jobs/bathroom-herringbone-2.jpg" alt="Bathroom with herringbone floor and marble-effect shower" loading="lazy">
+          <span class="tile__cap">Herringbone bathroom &amp; shower</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/bathroom-herringbone-3.jpg" data-cap="Herringbone bathroom &amp; shower">
+          <img src="assets/img/jobs/bathroom-herringbone-3.jpg" alt="Bathroom with herringbone floor and marble-effect shower" loading="lazy">
+          <span class="tile__cap">Herringbone bathroom &amp; shower</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/bathroom-herringbone-4.jpg" data-cap="Herringbone bathroom &amp; shower">
+          <img src="assets/img/jobs/bathroom-herringbone-4.jpg" alt="Bathroom with herringbone floor and marble-effect shower" loading="lazy">
+          <span class="tile__cap">Herringbone bathroom &amp; shower</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/bathroom-herringbone-5.jpg" data-cap="Herringbone bathroom &amp; shower">
+          <img src="assets/img/jobs/bathroom-herringbone-5.jpg" alt="Bathroom with herringbone floor and marble-effect shower" loading="lazy">
+          <span class="tile__cap">Herringbone bathroom &amp; shower</span>
+        </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ JOINERY ============ -->
+  <section class="section" id="joinery" data-spy>
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Joinery &amp; Finishing</span>
+        <h2>Bespoke joinery, doors &amp; flooring</h2>
+        <p class="lead">Made-to-measure alcove units, fitted doors and new flooring — the details that finish a room properly.</p>
+      </div>
+      <div class="job reveal">
+        <h3 class="job-title">Alcove shelving &amp; TV units<span>Built-in, made to measure</span></h3>
+        <div class="masonry">
+        <button class="tile" data-lightbox data-full="assets/img/jobs/alcove-units-1.jpg" data-cap="Alcove shelving &amp; TV units">
+          <img src="assets/img/jobs/alcove-units-1.jpg" alt="Built-in alcove shelving and TV unit" loading="lazy">
+          <span class="tile__cap">Alcove shelving &amp; TV units</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/alcove-units-2.jpg" data-cap="Alcove shelving &amp; TV units">
+          <img src="assets/img/jobs/alcove-units-2.jpg" alt="Built-in alcove shelving and TV unit" loading="lazy">
+          <span class="tile__cap">Alcove shelving &amp; TV units</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/alcove-units-3.jpg" data-cap="Alcove shelving &amp; TV units">
+          <img src="assets/img/jobs/alcove-units-3.jpg" alt="Built-in alcove shelving and TV unit" loading="lazy">
+          <span class="tile__cap">Alcove shelving &amp; TV units</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/alcove-units-4.jpg" data-cap="Alcove shelving &amp; TV units">
+          <img src="assets/img/jobs/alcove-units-4.jpg" alt="Built-in alcove shelving and TV unit" loading="lazy">
+          <span class="tile__cap">Alcove shelving &amp; TV units</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/alcove-units-5.jpg" data-cap="Alcove shelving &amp; TV units">
+          <img src="assets/img/jobs/alcove-units-5.jpg" alt="Built-in alcove shelving and TV unit" loading="lazy">
+          <span class="tile__cap">Alcove shelving &amp; TV units</span>
+        </button>
+        </div>
+      </div>
+      <div class="job reveal">
+        <h3 class="job-title">Doors<span>Front door &amp; painted internal door</span></h3>
+        <div class="masonry">
+        <button class="tile" data-lightbox data-full="assets/img/jobs/doors-1.jpg" data-cap="Doors">
+          <img src="assets/img/jobs/doors-1.jpg" alt="Fitted door" loading="lazy">
+          <span class="tile__cap">Doors</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/doors-2.jpg" data-cap="Doors">
+          <img src="assets/img/jobs/doors-2.jpg" alt="Fitted door" loading="lazy">
+          <span class="tile__cap">Doors</span>
+        </button>
+        </div>
+      </div>
+      <div class="job reveal">
+        <h3 class="job-title">New flooring &amp; hidden storage<span>Kitchen and hallway flooring with access hatch</span></h3>
+        <div class="masonry">
+        <button class="tile" data-lightbox data-full="assets/img/jobs/flooring-1.jpg" data-cap="New flooring &amp; hidden storage">
+          <img src="assets/img/jobs/flooring-1.jpg" alt="New flooring installation" loading="lazy">
+          <span class="tile__cap">New flooring &amp; hidden storage</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/flooring-2.jpg" data-cap="New flooring &amp; hidden storage">
+          <img src="assets/img/jobs/flooring-2.jpg" alt="New flooring installation" loading="lazy">
+          <span class="tile__cap">New flooring &amp; hidden storage</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/flooring-3.jpg" data-cap="New flooring &amp; hidden storage">
+          <img src="assets/img/jobs/flooring-3.jpg" alt="New flooring installation" loading="lazy">
+          <span class="tile__cap">New flooring &amp; hidden storage</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/flooring-4.jpg" data-cap="New flooring &amp; hidden storage">
+          <img src="assets/img/jobs/flooring-4.jpg" alt="New flooring installation" loading="lazy">
+          <span class="tile__cap">New flooring &amp; hidden storage</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/flooring-5.jpg" data-cap="New flooring &amp; hidden storage">
+          <img src="assets/img/jobs/flooring-5.jpg" alt="New flooring installation" loading="lazy">
+          <span class="tile__cap">New flooring &amp; hidden storage</span>
+        </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ROOFING &AMP; BUILDING ============ -->
+  <section class="section section--cream" id="roofing" data-spy>
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Roofing &amp; Building</span>
+        <h2>Roofing &amp; building work</h2>
+        <p class="lead">Beyond the interior, we take on the structural work too — roofs, lightweight insulated conservatory roofs, pergolas, shopfronts and general building projects.</p>
+      </div>
+      <div class="masonry reveal">
+        <button class="tile" data-lightbox data-full="assets/img/roofing/roofing-4.jpeg" data-cap="Finished pergola &amp; patio">
+          <img src="assets/img/roofing/roofing-4.jpeg" alt="Finished garden pergola and patio lit at night" loading="lazy">
+          <span class="tile__cap">Finished pergola &amp; patio</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/roofing/roofing-10.jpeg" data-cap="Insulated conservatory roof">
+          <img src="assets/img/roofing/roofing-10.jpeg" alt="Conservatory with new lightweight insulated tiled roof" loading="lazy">
+          <span class="tile__cap">Insulated conservatory roof</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/roofing/roofing-7.jpeg" data-cap="Conservatory — finished">
+          <img src="assets/img/roofing/roofing-7.jpeg" alt="Finished conservatory with new roof, exterior view" loading="lazy">
+          <span class="tile__cap">Conservatory — finished</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/roofing/roofing-9.jpeg" data-cap="Finished felt roof">
+          <img src="assets/img/roofing/roofing-9.jpeg" alt="Neatly finished felt shingle roof with lead flashing" loading="lazy">
+          <span class="tile__cap">Finished felt roof</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/roofing/roofing-5.jpeg" data-cap="Pergola frame">
+          <img src="assets/img/roofing/roofing-5.jpeg" alt="Timber pergola frame constructed in a garden" loading="lazy">
+          <span class="tile__cap">Pergola frame</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/roofing/roofing-8.jpeg" data-cap="Conservatory roof — in build">
+          <img src="assets/img/roofing/roofing-8.jpeg" alt="New timber roof structure inside a conservatory" loading="lazy">
+          <span class="tile__cap">Conservatory roof — in build</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/roofing/roofing-3.jpeg" data-cap="Pergola construction">
+          <img src="assets/img/roofing/roofing-3.jpeg" alt="Close-up of timber pergola beams during construction" loading="lazy">
+          <span class="tile__cap">Pergola construction</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/roofing/roofing-2.jpeg" data-cap="Membrane &amp; flashing">
+          <img src="assets/img/roofing/roofing-2.jpeg" alt="Breathable roof membrane and lead flashing installation" loading="lazy">
+          <span class="tile__cap">Membrane &amp; flashing</span>
+        </button>
+      </div>
+      <div class="job reveal">
+        <h3 class="job-title">Lightweight tiled roofs<span>Red tiles over a conservatory &amp; extension</span></h3>
+        <div class="masonry">
+        <button class="tile" data-lightbox data-full="assets/img/jobs/tiled-roof-1.jpg" data-cap="Lightweight tiled roofs">
+          <img src="assets/img/jobs/tiled-roof-1.jpg" alt="Lightweight tiled roof" loading="lazy">
+          <span class="tile__cap">Lightweight tiled roofs</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/tiled-roof-2.jpg" data-cap="Lightweight tiled roofs">
+          <img src="assets/img/jobs/tiled-roof-2.jpg" alt="Lightweight tiled roof" loading="lazy">
+          <span class="tile__cap">Lightweight tiled roofs</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/tiled-roof-3.jpg" data-cap="Lightweight tiled roofs">
+          <img src="assets/img/jobs/tiled-roof-3.jpg" alt="Lightweight tiled roof" loading="lazy">
+          <span class="tile__cap">Lightweight tiled roofs</span>
+        </button>
+        </div>
+      </div>
+      <div class="job reveal">
+        <h3 class="job-title">Bay window roof<span>New tiled roof &amp; oak detail</span></h3>
+        <div class="masonry">
+        <button class="tile" data-lightbox data-full="assets/img/jobs/bay-roof-1.jpg" data-cap="Bay window roof">
+          <img src="assets/img/jobs/bay-roof-1.jpg" alt="New tiled bay window roof" loading="lazy">
+          <span class="tile__cap">Bay window roof</span>
+        </button>
+        <button class="tile" data-lightbox data-full="assets/img/jobs/bay-roof-2.jpg" data-cap="Bay window roof">
+          <img src="assets/img/jobs/bay-roof-2.jpg" alt="New tiled bay window roof" loading="lazy">
+          <span class="tile__cap">Bay window roof</span>
+        </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section class="section" id="reviews" data-spy>
     <div class="container">
       <div class="section-head center reveal">
         <span class="eyebrow">Reviews</span>
-        <h2>Trusted by local homeowners</h2>
-        <a class="google-badge" href="https://www.google.com/search?q=Lyons+Bespoke+Kitchens+and+Bathrooms+Retford" target="_blank" rel="noopener" aria-label="See our reviews on Google">
+        <h2>What customers say on Google</h2>
+        <p class="lead">Our latest 4&#9733; and 5&#9733; reviews, pulled straight from Google.</p>
+      </div>
+      <!-- Live Google reviews mount. Set featurableId in main.js (CONFIG) and the widget loads here. -->
+      <div class="reviews-widget" data-reviews>
+        <div class="reviews-fallback">
+          <p>Read what our customers have said about us on Google.</p>
+        </div>
+      </div>
+      <div class="center" style="margin-top:32px">
+        <a class="google-badge" href="https://www.google.com/search?q=Lyons+Bespoke+Kitchens+and+Bathrooms+Retford" target="_blank" rel="noopener">
           <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.8-2.4 3.6v3h3.9c2.3-2.1 3.7-5.2 3.7-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 5.9-1.1 7.8-2.9l-3.9-3c-1.1.7-2.5 1.2-3.9 1.2-3 0-5.6-2-6.5-4.8H1.5v3.1C3.4 21.4 7.4 24 12 24z"/><path fill="#FBBC05" d="M5.5 14.5c-.2-.7-.4-1.4-.4-2.5s.2-1.8.4-2.5V6.4H1.5C.5 8.1 0 10 0 12s.5 3.9 1.5 5.6l4-3.1z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.4.6 4.6 1.8l3.5-3.5C17.9 1.2 15.2 0 12 0 7.4 0 3.4 2.6 1.5 6.4l4 3.1C6.4 6.7 9 4.8 12 4.8z"/></svg>
           <span class="google-badge__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <span>Reviews on Google</span>
+          <span>Read &amp; leave a review on Google</span>
           <span class="google-badge__arrow">&#8594;</span>
         </a>
-      </div>
-
-      <!-- ============================ GOOGLE REVIEWS ============================
-           The cards below are shown by default and always work. To replace them
-           with a LIVE, auto-updating Google Reviews feed FILTERED TO 4★ AND ABOVE:
-           1. Sign up free at https://featurable.com (recommended) — connect your
-              Google Business Profile. In the widget settings, set the minimum
-              rating / filter to "4 stars and above".
-              (Elfsight and Trustindex also work and have the same rating filter.)
-           2. Copy the widget snippet they give you, e.g. Featurable:
-                <div id="featurable-XXXX" data-featurable-async></div>
-                <script src="https://featurable.com/assets/js/widget.js" async></script>
-           3. Delete the <div class="quotes">…</div> block below and paste it there.
-           ===================================================================== -->
-      <div class="quotes reviews-widget">
-        <figure class="quote reveal">
-          <div class="quote__stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote class="quote__text">"Darren really cares about doing an excellent job and I highly recommend his services."</blockquote>
-          <figcaption class="quote__who"><strong>H. Kennedy</strong><span>Sheffield</span></figcaption>
-        </figure>
-        <figure class="quote reveal">
-          <div class="quote__stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote class="quote__text">"Excellent work — Lyons turned my office space into a modern, safe and quality environment. Fast, trustworthy and transparent."</blockquote>
-          <figcaption class="quote__who"><strong>A. Eren</strong><span>Local Business Owner</span></figcaption>
-        </figure>
-        <figure class="quote reveal">
-          <div class="quote__stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote class="quote__text">"Lyons' loft insulation was quick and well priced. We noticed such an improvement in our heating bills."</blockquote>
-          <figcaption class="quote__who"><strong>J. Crossland</strong><span>Homeowner, Warwick</span></figcaption>
-        </figure>
-      </div>
-      <div class="center" style="margin-top:40px">
-        <a href="https://www.google.com/search?q=Lyons+Bespoke+Kitchens+and+Bathrooms+Retford" class="btn btn--primary" target="_blank" rel="noopener">Read &amp; leave a review on Google</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ SOCIAL FEEDS ============ -->
-  <section class="section">
-    <div class="container">
-      <div class="section-head center reveal">
-        <span class="eyebrow">Follow Us</span>
-        <h2>See our latest work on social</h2>
-        <p class="lead">We share recent projects, progress shots and finished results on Instagram and Facebook. Swipe through and give us a follow.</p>
-        <div class="social-follow">
-          <a href="https://www.instagram.com/lyonsbespoke/" class="btn btn--primary" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-            @lyonsbespoke
-          </a>
-          <a href="https://www.facebook.com/61568991250123" class="btn btn--ghost" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg>
-            Lyons Bespoke
-          </a>
-        </div>
-      </div>
-
-      <!-- ===================== INSTAGRAM (preview only) =====================
-           NOTE: the tiles below are PLACEHOLDER project photos, not live Instagram
-           posts — Instagram blocks unauthenticated access, so real posts can't be
-           read automatically. To show REAL, auto-updating posts here, connect a free
-           widget (Elfsight or Behold), then replace this whole <div class="slider">…</div>
-           with the widget snippet, e.g. Elfsight:
-             <script src="https://static.elfsight.com/platform/platform.js" async></script>
-             <div class="elfsight-app-XXXX" data-elfsight-app-lazy></div>
-           ==================================================================== -->
-      <div class="feed-label reveal">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-        <span>Instagram</span>
-        <em>Preview &mdash; connect for live posts</em>
-      </div>
-      <div class="slider reveal" data-slider>
-        <button class="slider__btn slider__prev" data-slider-prev aria-label="Previous posts">&#8249;</button>
-        <div class="slider__track" data-slider-track>
-          <a class="slide" href="https://www.instagram.com/lyonsbespoke/" target="_blank" rel="noopener"><img src="assets/img/kitchens/kitchens-1.jpeg" alt="Modern fitted kitchen" loading="lazy"><span class="slide__cap">Modern fitted kitchen</span></a>
-          <a class="slide" href="https://www.instagram.com/lyonsbespoke/" target="_blank" rel="noopener"><img src="assets/img/bathrooms/bathrooms-7.jpeg" alt="Wood-panelled bathroom" loading="lazy"><span class="slide__cap">Wood-panelled bathroom</span></a>
-          <a class="slide" href="https://www.instagram.com/lyonsbespoke/" target="_blank" rel="noopener"><img src="assets/img/roofing/roofing-4.jpeg" alt="Garden pergola and patio" loading="lazy"><span class="slide__cap">Pergola &amp; patio</span></a>
-          <a class="slide" href="https://www.instagram.com/lyonsbespoke/" target="_blank" rel="noopener"><img src="assets/img/kitchens/kitchens-2.jpeg" alt="Handleless grey kitchen" loading="lazy"><span class="slide__cap">Handleless grey kitchen</span></a>
-          <a class="slide" href="https://www.instagram.com/lyonsbespoke/" target="_blank" rel="noopener"><img src="assets/img/bathrooms/bathrooms-2.jpeg" alt="Walk-in shower" loading="lazy"><span class="slide__cap">Walk-in shower</span></a>
-          <a class="slide" href="https://www.instagram.com/lyonsbespoke/" target="_blank" rel="noopener"><img src="assets/img/roofing/roofing-10.jpeg" alt="Insulated conservatory roof" loading="lazy"><span class="slide__cap">Insulated conservatory roof</span></a>
-          <a class="slide" href="https://www.instagram.com/lyonsbespoke/" target="_blank" rel="noopener"><img src="assets/img/bathrooms/bathrooms-5.jpeg" alt="Fitted shower enclosure" loading="lazy"><span class="slide__cap">Fitted shower enclosure</span></a>
-          <a class="slide" href="https://www.instagram.com/lyonsbespoke/" target="_blank" rel="noopener"><img src="assets/img/roofing/roofing-9.jpeg" alt="New felt roof" loading="lazy"><span class="slide__cap">New felt roof</span></a>
-        </div>
-        <button class="slider__btn slider__next" data-slider-next aria-label="Next posts">&#8250;</button>
-        <div class="slider__dots" data-slider-dots aria-hidden="true"></div>
-      </div>
-
-      <!-- ===================== FACEBOOK (live) =====================
-           Official Page Plugin — your real, auto-updating Facebook posts.
-           Uses the page's numeric id (61568991250123).
-           ========================================================== -->
-      <div class="fb-live reveal">
-        <div class="feed-label">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg>
-          <span>Facebook</span>
-          <em class="is-live">Live posts</em>
-        </div>
-        <div class="fb-embed">
-          <iframe title="Latest posts from Lyons Bespoke on Facebook"
-            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F61568991250123&tabs=timeline&width=500&height=680&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
-            width="500" height="680" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-            allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-            loading="lazy"></iframe>
-        </div>
       </div>
     </div>
   </section>
@@ -381,6 +686,124 @@
     </div>
   </section>
 
+  <!-- ============ CONTACT ============ -->
+  <section class="section section--cream" id="contact" data-spy>
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Get in Touch</span>
+        <h2>Let's talk about your project</h2>
+        <p class="lead">Tell us what you have in mind and we'll get back to you with honest advice and a free, no-obligation quote.</p>
+      </div>
+      <div class="contact-grid">
+
+        <!-- Contact details -->
+        <div>
+          <div class="contact-info">
+            <div class="info-row">
+              <span class="info-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+              <div>
+                <h3>Call or text</h3>
+                <a href="tel:+447547415968">07547 415968</a>
+              </div>
+            </div>
+            <div class="info-row">
+              <span class="info-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+              <div>
+                <h3>Email</h3>
+                <a href="mailto:drrnlyons@gmail.com">drrnlyons@gmail.com</a>
+              </div>
+            </div>
+            <div class="info-row">
+              <span class="info-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <div>
+                <h3>Based in</h3>
+                <p>Retford, United Kingdom</p>
+              </div>
+            </div>
+            <div class="info-row">
+              <span class="info-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+              <div>
+                <h3>Areas we cover</h3>
+                <p>Nottinghamshire, South Yorkshire, East Riding, Leicestershire, Lincolnshire and across the Midlands.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:28px;display:flex;flex-wrap:wrap;gap:12px">
+            <a href="https://wa.me/447547415968" class="btn btn--oak" target="_blank" rel="noopener">Chat on WhatsApp</a>
+            <a href="tel:+447547415968" class="btn btn--ghost">Call now</a>
+          </div>
+        </div>
+
+        <!-- Enquiry form -->
+        <div>
+          <!--
+            ============================================================
+            TO RECEIVE FORM SUBMISSIONS BY EMAIL:
+            1. Create a free account at https://formspree.io
+            2. Create a form and copy its endpoint (looks like
+               https://formspree.io/f/abcdwxyz)
+            3. Replace YOUR_FORM_ID below with that ID.
+            Until then, the "Email us directly" button always works.
+            ============================================================
+          -->
+          <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <h2 style="font-size:1.6rem;margin-bottom:.4rem">Request a free quote</h2>
+            <p style="color:var(--muted);margin-bottom:1.5rem">Fill in a few details and we'll be in touch soon.</p>
+
+            <div class="form__row">
+              <div class="field">
+                <label for="first">First name</label>
+                <input type="text" id="first" name="First name" autocomplete="given-name" required>
+              </div>
+              <div class="field">
+                <label for="last">Last name</label>
+                <input type="text" id="last" name="Last name" autocomplete="family-name" required>
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+              </div>
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="Phone" autocomplete="tel">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="service">What can we help with?</label>
+              <select id="service" name="Service">
+                <option value="" selected>Please choose…</option>
+                <option>Kitchen</option>
+                <option>Bathroom</option>
+                <option>Fitted wardrobes</option>
+                <option>Media wall</option>
+                <option>Windows &amp; doors</option>
+                <option>Tiling</option>
+                <option>Garage conversion</option>
+                <option>Conservatory roof</option>
+                <option>Roofing &amp; building</option>
+                <option>Something else</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="message">Tell us about your project</label>
+              <textarea id="message" name="Message" placeholder="A few details about what you'd like done, and roughly when…" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center">Send Enquiry</button>
+            <p class="form__note">Prefer email? Write to us at <a href="mailto:drrnlyons@gmail.com">drrnlyons@gmail.com</a>. We aim to reply within a day or two.</p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ============ CTA ============ -->
   <section class="section section--ink">
     <div class="container cta-band reveal">
@@ -390,7 +813,7 @@
       <div class="cta-methods">
         <a href="tel:+447547415968" class="btn btn--oak">Call 07547 415968</a>
         <a href="https://wa.me/447547415968" class="btn btn--light" target="_blank" rel="noopener">Chat on WhatsApp</a>
-        <a href="contact.html" class="btn btn--outline-light">Send an Enquiry</a>
+        <a href="#contact" class="btn btn--outline-light">Send an Enquiry</a>
       </div>
     </div>
   </section>
@@ -400,7 +823,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="footer-brand__name">LYONS BESPOKE</div>
+          <img class="footer-logo" src="assets/img/brand/logo-light.png" alt="Lyons Bespoke" width="310" height="105">
           <p>Reliable kitchen fitters, bathroom fitters and joiners focused on craftsmanship, stability and trust. Building the future, restoring the past.</p>
           <div class="footer-social">
             <a href="https://www.facebook.com/people/Lyons-Bespoke-kitchens-Bathrooms/61568991250123/" target="_blank" rel="noopener" aria-label="Facebook">
@@ -414,11 +837,13 @@
         <div>
           <h4>Explore</h4>
           <ul class="footer-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="kitchens.html">Kitchens</a></li>
-            <li><a href="bathrooms.html">Bathrooms</a></li>
-            <li><a href="roofing.html">Roofing &amp; Building</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#kitchens">Kitchens</a></li>
+            <li><a href="#bathrooms">Bathrooms</a></li>
+            <li><a href="#joinery">Joinery</a></li>
+            <li><a href="#roofing">Roofing &amp; Building</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
         <div>
