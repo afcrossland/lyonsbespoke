@@ -1,0 +1,19 @@
+# Pages CMS config (https://app.pagescms.org) — lets Darren add photos to the website gallery.
+media:
+  input: assets/img/uploads
+  output: /assets/img/uploads
+
+content:
+  - name: gallery
+    label: Photo gallery
+    type: file
+    path: data/recent.json
+    format: json
+    fields:
+      - name: photos
+        label: Photos of our work
+        type: image
+        options:
+          multiple: true
+          extensions: [jpg, jpeg, png, webp]
+          rename: safe

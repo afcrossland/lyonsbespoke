@@ -18,7 +18,14 @@ Fallback: add specific post URLs (`https://www.instagram.com/p/XXXX/`) to `insta
 - [ ] Paste it into `featurableId` in the `CONFIG` block in `main.js`
 - [ ] Push and check the Reviews section loads. If not, paste Featurable's full embed code into the `data-reviews` div in `index.html`
 
-## 3. Smaller jobs
+## 3. Darren's photo gallery (Pages CMS)
+- [ ] Darren: create a free GitHub account
+- [ ] Andrew: add Darren as a collaborator (write) on `afcrossland/lyonsbespoke`; Darren accepts the invite
+- [ ] Darren: sign in at https://app.pagescms.org with GitHub, open the repo → "Photo gallery"
+- [ ] Test on an iPhone: upload one photo, Save, check "Latest work" appears on the site after a minute or two
+- [ ] Tip: tell Darren to Add to Home Screen. Photos he adds are shown newest first (check the order is right after the first test)
+
+## 4. Smaller jobs
 - [ ] Swap in the exact Google review link (hero badge, Reviews button) — currently a Google search link
 - [ ] Confirm the navy kitchen wording ("handleless", "quartz worktops") is right
 - [ ] Optional: remove the Facebook icon in the footer and `sameAs` link, if dropping Facebook fully

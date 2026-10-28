@@ -9,8 +9,11 @@ free on GitHub Pages with the custom domain `www.lyonsbespoke.com`.
 ```
 index.html         The whole site: one scrolling page
 404.html           Not-found page
+data/gallery.json  Photo lists for the Kitchens/Bathrooms/Joinery/Roofing galleries
+data/recent.json   "Latest work" photos — the list Darren edits via Pages CMS
+.pages.yml         Config for Pages CMS (Darren's photo gallery login)
 styles.css         All styling (brand: espresso #3c2015 on cream #f5f0e8)
-main.js            Mobile nav, scroll reveal, gallery lightbox
+main.js            Nav, scroll-spy, galleries (from data/gallery.json), lightbox, embeds
 favicon.ico, favicon-32.png, apple-touch-icon.png   Site icons (lion mark from the logo)
 assets/img/…       Project photos (kitchens / bathrooms / roofing / brand)
 sitemap.xml, robots.txt
@@ -77,12 +80,25 @@ work: paste their snippet into the `data-reviews` div in `index.html`.) Until an
 is set, the section shows a link to your Google reviews. Update the Google link in
 that section to your exact review URL once you have it.
 
+## Letting Darren add photos (Pages CMS)
+
+Darren adds photos to a simple "Latest work" gallery through [Pages CMS](https://app.pagescms.org),
+a free web admin that works on a phone. There is nothing to host or install.
+
+One-off setup:
+1. Darren creates a free GitHub account (github.com, any email).
+2. On GitHub: repo `afcrossland/lyonsbespoke` → Settings → Collaborators → add Darren (he needs write access) and he accepts the email invite.
+3. Darren opens app.pagescms.org, signs in with GitHub, and picks the `lyonsbespoke` repo. He sees **Photo gallery**.
+
+To add photos: open **Photo gallery** → **Add** under "Photos of our work" → **Upload** → choose photos from the phone → **Save**.
+The photos appear on the site (a "Latest work" section, newest first) a minute or two later.
+The section stays hidden until the first photo is added. Photos are resized on the fly (wsrv.nl), so big phone photos are fine.
+
 ## Editing content
 
 - **Text**: edit `index.html` directly — it's plain, commented HTML.
-- **Photos**: drop new images into `assets/img/<category>/` and add a `<button class="tile">`
-  to the matching gallery (`#kitchens`, `#bathrooms`, `#roofing`). Galleries are
-  masonry, so photos of any shape display uncropped; click opens the lightbox.
+- **Photos (Darren)**: log in at https://app.pagescms.org (see below) and add photos to "Photo gallery".
+- **Photos (curated sections)**: edit `data/gallery.json` (job groups for Kitchens, Bathrooms, Joinery, Roofing).
 - **Menu**: nav links are `#section-id` anchors; the active one follows your scroll.
 - **Colours & fonts**: change the CSS variables at the top of `styles.css`.
 - **Contact details / social links**: search the HTML for `07547 415968` or

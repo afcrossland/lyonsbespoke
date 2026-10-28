@@ -1,0 +1,466 @@
+{
+ "sections": {
+  "kitchens": {
+   "featured": [
+    {
+     "src": "assets/img/kitchens/kitchens-1.jpeg",
+     "cap": "Fitted & ready to enjoy",
+     "alt": "Completed modern grey fitted kitchen"
+    },
+    {
+     "src": "assets/img/kitchens/kitchens-2.jpeg",
+     "cap": "White goods fitted & tested",
+     "alt": "Grey kitchen with integrated appliances fitted and tested"
+    },
+    {
+     "src": "assets/img/kitchens/kitchens-3.jpeg",
+     "cap": "In build",
+     "alt": "Kitchen installation in progress"
+    }
+   ],
+   "jobs": [
+    {
+     "id": "navy-handleless-kitchen",
+     "title": "Navy handleless kitchen",
+     "sub": "Oak flooring & quartz worktops",
+     "photos": [
+      {
+       "src": "assets/img/jobs/navy-kitchen-1.jpg",
+       "cap": "Navy handleless kitchen",
+       "alt": "Navy handleless fitted kitchen with oak floor"
+      },
+      {
+       "src": "assets/img/jobs/navy-kitchen-2.jpg",
+       "cap": "Navy handleless kitchen",
+       "alt": "Navy handleless fitted kitchen with oak floor"
+      },
+      {
+       "src": "assets/img/jobs/navy-kitchen-3.jpg",
+       "cap": "Navy handleless kitchen",
+       "alt": "Navy handleless fitted kitchen with oak floor"
+      },
+      {
+       "src": "assets/img/jobs/navy-kitchen-4.jpg",
+       "cap": "Navy handleless kitchen",
+       "alt": "Navy handleless fitted kitchen with oak floor"
+      },
+      {
+       "src": "assets/img/jobs/navy-kitchen-5.jpg",
+       "cap": "Navy handleless kitchen",
+       "alt": "Navy handleless fitted kitchen with oak floor"
+      },
+      {
+       "src": "assets/img/jobs/navy-kitchen-6.jpg",
+       "cap": "Navy handleless kitchen",
+       "alt": "Navy handleless fitted kitchen with oak floor"
+      }
+     ]
+    },
+    {
+     "id": "deep-teal-shaker-kitchen",
+     "title": "Deep teal shaker kitchen",
+     "sub": "Marble-effect splashback & brass handles",
+     "photos": [
+      {
+       "src": "assets/img/jobs/teal-kitchen-1.jpg",
+       "cap": "Deep teal shaker kitchen",
+       "alt": "Deep teal shaker kitchen with marble splashback"
+      },
+      {
+       "src": "assets/img/jobs/teal-kitchen-2.jpg",
+       "cap": "Deep teal shaker kitchen",
+       "alt": "Deep teal shaker kitchen with marble splashback"
+      },
+      {
+       "src": "assets/img/jobs/teal-kitchen-3.jpg",
+       "cap": "Deep teal shaker kitchen",
+       "alt": "Deep teal shaker kitchen with marble splashback"
+      },
+      {
+       "src": "assets/img/jobs/teal-kitchen-4.jpg",
+       "cap": "Deep teal shaker kitchen",
+       "alt": "Deep teal shaker kitchen with marble splashback"
+      },
+      {
+       "src": "assets/img/jobs/teal-kitchen-5.jpg",
+       "cap": "Deep teal shaker kitchen",
+       "alt": "Deep teal shaker kitchen with marble splashback"
+      },
+      {
+       "src": "assets/img/jobs/teal-kitchen-6.jpg",
+       "cap": "Deep teal shaker kitchen",
+       "alt": "Deep teal shaker kitchen with marble splashback"
+      },
+      {
+       "src": "assets/img/jobs/teal-kitchen-7.jpg",
+       "cap": "Deep teal shaker kitchen",
+       "alt": "Deep teal shaker kitchen with marble splashback"
+      }
+     ]
+    },
+    {
+     "id": "cream-kitchen",
+     "title": "Cream kitchen",
+     "sub": "Marble-effect worktops & tall larder units",
+     "photos": [
+      {
+       "src": "assets/img/jobs/cream-kitchen-1.jpg",
+       "cap": "Cream kitchen",
+       "alt": "Cream kitchen with marble-effect worktop"
+      },
+      {
+       "src": "assets/img/jobs/cream-kitchen-2.jpg",
+       "cap": "Cream kitchen",
+       "alt": "Cream kitchen with marble-effect worktop"
+      },
+      {
+       "src": "assets/img/jobs/cream-kitchen-3.jpg",
+       "cap": "Cream kitchen",
+       "alt": "Cream kitchen with marble-effect worktop"
+      },
+      {
+       "src": "assets/img/jobs/cream-kitchen-4.jpg",
+       "cap": "Cream kitchen",
+       "alt": "Cream kitchen with marble-effect worktop"
+      },
+      {
+       "src": "assets/img/jobs/cream-kitchen-5.jpg",
+       "cap": "Cream kitchen",
+       "alt": "Cream kitchen with marble-effect worktop"
+      },
+      {
+       "src": "assets/img/jobs/cream-kitchen-6.jpg",
+       "cap": "Cream kitchen",
+       "alt": "Cream kitchen with marble-effect worktop"
+      }
+     ]
+    },
+    {
+     "id": "grey-shaker-kitchen",
+     "title": "Grey shaker kitchen",
+     "sub": "Tiled floor & stone worktops",
+     "photos": [
+      {
+       "src": "assets/img/jobs/grey-kitchen-1.jpg",
+       "cap": "Grey shaker kitchen",
+       "alt": "Grey shaker kitchen with tiled floor"
+      },
+      {
+       "src": "assets/img/jobs/grey-kitchen-2.jpg",
+       "cap": "Grey shaker kitchen",
+       "alt": "Grey shaker kitchen with tiled floor"
+      },
+      {
+       "src": "assets/img/jobs/grey-kitchen-3.jpg",
+       "cap": "Grey shaker kitchen",
+       "alt": "Grey shaker kitchen with tiled floor"
+      }
+     ]
+    },
+    {
+     "id": "white-kitchen-utility",
+     "title": "White kitchen & utility",
+     "sub": "Oak flooring, integrated appliances",
+     "photos": [
+      {
+       "src": "assets/img/jobs/white-kitchen-1.jpg",
+       "cap": "White kitchen & utility",
+       "alt": "White fitted kitchen with oak floor"
+      },
+      {
+       "src": "assets/img/jobs/white-kitchen-2.jpg",
+       "cap": "White kitchen & utility",
+       "alt": "White fitted kitchen with oak floor"
+      },
+      {
+       "src": "assets/img/jobs/white-kitchen-3.jpg",
+       "cap": "White kitchen & utility",
+       "alt": "White fitted kitchen with oak floor"
+      },
+      {
+       "src": "assets/img/jobs/white-kitchen-4.jpg",
+       "cap": "White kitchen & utility",
+       "alt": "White fitted kitchen with oak floor"
+      },
+      {
+       "src": "assets/img/jobs/white-kitchen-5.jpg",
+       "cap": "White kitchen & utility",
+       "alt": "White fitted kitchen with oak floor"
+      },
+      {
+       "src": "assets/img/jobs/white-kitchen-6.jpg",
+       "cap": "White kitchen & utility",
+       "alt": "White fitted kitchen with oak floor"
+      }
+     ]
+    },
+    {
+     "id": "stone-shaker-kitchen",
+     "title": "Stone shaker kitchen",
+     "sub": "Oak worktops & new flooring",
+     "photos": [
+      {
+       "src": "assets/img/jobs/shaker-kitchen-1.jpg",
+       "cap": "Stone shaker kitchen",
+       "alt": "Stone shaker kitchen with oak worktop"
+      },
+      {
+       "src": "assets/img/jobs/shaker-kitchen-2.jpg",
+       "cap": "Stone shaker kitchen",
+       "alt": "Stone shaker kitchen with oak worktop"
+      },
+      {
+       "src": "assets/img/jobs/shaker-kitchen-3.jpg",
+       "cap": "Stone shaker kitchen",
+       "alt": "Stone shaker kitchen with oak worktop"
+      },
+      {
+       "src": "assets/img/jobs/shaker-kitchen-4.jpg",
+       "cap": "Stone shaker kitchen",
+       "alt": "Stone shaker kitchen with oak worktop"
+      }
+     ]
+    }
+   ]
+  },
+  "bathrooms": {
+   "featured": [
+    {
+     "src": "assets/img/bathrooms/bathrooms-7.jpeg",
+     "cap": "Wood-panelled bathroom, fully fitted",
+     "alt": "Warm wood-panelled bathroom with freestanding bath"
+    },
+    {
+     "src": "assets/img/bathrooms/bathrooms-2.jpeg",
+     "cap": "Walk-in shower with grey tiling",
+     "alt": "Walk-in shower with grey tiling and glass screen"
+    },
+    {
+     "src": "assets/img/bathrooms/bathrooms-6.jpeg",
+     "cap": "Fitted shower with rainfall head",
+     "alt": "White-tiled shower enclosure with rainfall shower head"
+    },
+    {
+     "src": "assets/img/bathrooms/bathrooms-5.jpeg",
+     "cap": "Sliding-door shower enclosure",
+     "alt": "Teal bathroom with sliding-door shower enclosure"
+    },
+    {
+     "src": "assets/img/bathrooms/bathrooms-4.jpeg",
+     "cap": "Fitted cloakroom",
+     "alt": "Teal cloakroom with toilet, basin and heated towel rail"
+    },
+    {
+     "src": "assets/img/bathrooms/bathrooms-1.jpeg",
+     "cap": "Strip-out, ready to rebuild",
+     "alt": "Bathroom stripped back to brick before renovation"
+    }
+   ],
+   "jobs": [
+    {
+     "id": "herringbone-bathroom-shower",
+     "title": "Herringbone bathroom & shower",
+     "sub": "Marble-effect shower, oak vanity",
+     "photos": [
+      {
+       "src": "assets/img/jobs/bathroom-herringbone-1.jpg",
+       "cap": "Herringbone bathroom & shower",
+       "alt": "Bathroom with herringbone floor and marble-effect shower"
+      },
+      {
+       "src": "assets/img/jobs/bathroom-herringbone-2.jpg",
+       "cap": "Herringbone bathroom & shower",
+       "alt": "Bathroom with herringbone floor and marble-effect shower"
+      },
+      {
+       "src": "assets/img/jobs/bathroom-herringbone-3.jpg",
+       "cap": "Herringbone bathroom & shower",
+       "alt": "Bathroom with herringbone floor and marble-effect shower"
+      },
+      {
+       "src": "assets/img/jobs/bathroom-herringbone-4.jpg",
+       "cap": "Herringbone bathroom & shower",
+       "alt": "Bathroom with herringbone floor and marble-effect shower"
+      },
+      {
+       "src": "assets/img/jobs/bathroom-herringbone-5.jpg",
+       "cap": "Herringbone bathroom & shower",
+       "alt": "Bathroom with herringbone floor and marble-effect shower"
+      }
+     ]
+    }
+   ]
+  },
+  "joinery": {
+   "featured": [],
+   "jobs": [
+    {
+     "id": "alcove-shelving-tv-units",
+     "title": "Alcove shelving & TV units",
+     "sub": "Built-in, made to measure",
+     "photos": [
+      {
+       "src": "assets/img/jobs/alcove-units-1.jpg",
+       "cap": "Alcove shelving & TV units",
+       "alt": "Built-in alcove shelving and TV unit"
+      },
+      {
+       "src": "assets/img/jobs/alcove-units-2.jpg",
+       "cap": "Alcove shelving & TV units",
+       "alt": "Built-in alcove shelving and TV unit"
+      },
+      {
+       "src": "assets/img/jobs/alcove-units-3.jpg",
+       "cap": "Alcove shelving & TV units",
+       "alt": "Built-in alcove shelving and TV unit"
+      },
+      {
+       "src": "assets/img/jobs/alcove-units-4.jpg",
+       "cap": "Alcove shelving & TV units",
+       "alt": "Built-in alcove shelving and TV unit"
+      },
+      {
+       "src": "assets/img/jobs/alcove-units-5.jpg",
+       "cap": "Alcove shelving & TV units",
+       "alt": "Built-in alcove shelving and TV unit"
+      }
+     ]
+    },
+    {
+     "id": "doors",
+     "title": "Doors",
+     "sub": "Front door & painted internal door",
+     "photos": [
+      {
+       "src": "assets/img/jobs/doors-1.jpg",
+       "cap": "Doors",
+       "alt": "Fitted door"
+      },
+      {
+       "src": "assets/img/jobs/doors-2.jpg",
+       "cap": "Doors",
+       "alt": "Fitted door"
+      }
+     ]
+    },
+    {
+     "id": "new-flooring-hidden-storage",
+     "title": "New flooring & hidden storage",
+     "sub": "Kitchen and hallway flooring with access hatch",
+     "photos": [
+      {
+       "src": "assets/img/jobs/flooring-1.jpg",
+       "cap": "New flooring & hidden storage",
+       "alt": "New flooring installation"
+      },
+      {
+       "src": "assets/img/jobs/flooring-2.jpg",
+       "cap": "New flooring & hidden storage",
+       "alt": "New flooring installation"
+      },
+      {
+       "src": "assets/img/jobs/flooring-3.jpg",
+       "cap": "New flooring & hidden storage",
+       "alt": "New flooring installation"
+      },
+      {
+       "src": "assets/img/jobs/flooring-4.jpg",
+       "cap": "New flooring & hidden storage",
+       "alt": "New flooring installation"
+      },
+      {
+       "src": "assets/img/jobs/flooring-5.jpg",
+       "cap": "New flooring & hidden storage",
+       "alt": "New flooring installation"
+      }
+     ]
+    }
+   ]
+  },
+  "roofing": {
+   "featured": [
+    {
+     "src": "assets/img/roofing/roofing-4.jpeg",
+     "cap": "Finished pergola & patio",
+     "alt": "Finished garden pergola and patio lit at night"
+    },
+    {
+     "src": "assets/img/roofing/roofing-10.jpeg",
+     "cap": "Insulated conservatory roof",
+     "alt": "Conservatory with new lightweight insulated tiled roof"
+    },
+    {
+     "src": "assets/img/roofing/roofing-7.jpeg",
+     "cap": "Conservatory — finished",
+     "alt": "Finished conservatory with new roof, exterior view"
+    },
+    {
+     "src": "assets/img/roofing/roofing-9.jpeg",
+     "cap": "Finished felt roof",
+     "alt": "Neatly finished felt shingle roof with lead flashing"
+    },
+    {
+     "src": "assets/img/roofing/roofing-5.jpeg",
+     "cap": "Pergola frame",
+     "alt": "Timber pergola frame constructed in a garden"
+    },
+    {
+     "src": "assets/img/roofing/roofing-3.jpeg",
+     "cap": "Pergola construction",
+     "alt": "Close-up of timber pergola beams during construction"
+    }
+   ],
+   "jobs": [
+    {
+     "id": "lightweight-tiled-roofs",
+     "title": "Lightweight tiled roofs",
+     "sub": "Membrane, new roof structure & red tiles",
+     "photos": [
+      {
+       "src": "assets/img/roofing/roofing-2.jpeg",
+       "cap": "Membrane & flashing",
+       "alt": "Breathable roof membrane and lead flashing installation"
+      },
+      {
+       "src": "assets/img/roofing/roofing-8.jpeg",
+       "cap": "Conservatory roof — in build",
+       "alt": "New timber roof structure inside a conservatory"
+      },
+      {
+       "src": "assets/img/jobs/tiled-roof-1.jpg",
+       "cap": "Lightweight tiled roofs",
+       "alt": "Lightweight tiled roof"
+      },
+      {
+       "src": "assets/img/jobs/tiled-roof-2.jpg",
+       "cap": "Lightweight tiled roofs",
+       "alt": "Lightweight tiled roof"
+      },
+      {
+       "src": "assets/img/jobs/tiled-roof-3.jpg",
+       "cap": "Lightweight tiled roofs",
+       "alt": "Lightweight tiled roof"
+      }
+     ]
+    },
+    {
+     "id": "bay-window-roof",
+     "title": "Bay window roof",
+     "sub": "New tiled roof & oak detail",
+     "photos": [
+      {
+       "src": "assets/img/jobs/bay-roof-1.jpg",
+       "cap": "Bay window roof",
+       "alt": "New tiled bay window roof"
+      },
+      {
+       "src": "assets/img/jobs/bay-roof-2.jpg",
+       "cap": "Bay window roof",
+       "alt": "New tiled bay window roof"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
