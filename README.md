@@ -11,7 +11,7 @@ index.html         The whole site: one scrolling page
 404.html           Not-found page
 styles.css         All styling (brand: espresso #3c2015 on cream #f5f0e8)
 main.js            Mobile nav, scroll reveal, gallery lightbox
-favicon.svg        Site icon
+favicon.ico, favicon-32.png, apple-touch-icon.png   Site icons (lion mark from the logo)
 assets/img/…       Project photos (kitchens / bathrooms / roofing / brand)
 sitemap.xml, robots.txt
 ```
@@ -48,16 +48,7 @@ python3 -m http.server 8000
 > All asset paths are relative, so the site works both at the `github.io/lyonsbespoke/`
 > URL and at the root domain — no changes needed when you switch.
 
-## Make the contact form send emails
-
-The form in the `#contact` section of `index.html` is ready for [Formspree](https://formspree.io) (free tier):
-
-1. Sign up, create a form, copy its endpoint (e.g. `https://formspree.io/f/abcdwxyz`).
-2. Replace `YOUR_FORM_ID` in the `<form action="…">` with your ID.
-
-Until then, the phone, WhatsApp and email links all work with no setup.
-
-## Embedding Instagram, Facebook and Google reviews
+## Instagram and Google reviews
 
 The site is a single page (`index.html`). The two live embeds are switched on in
 one place — the `CONFIG` block at the top of `main.js`:
@@ -65,11 +56,16 @@ one place — the `CONFIG` block at the top of `main.js`:
 ```js
 var CONFIG = {
   featurableId: "",      // Google reviews widget id from featurable.com
-  instagramPosts: []     // e.g. ["https://www.instagram.com/p/AbCdEfGhIjK/"]
+  beholdFeedUrl: "",     // e.g. "https://feeds.behold.so/XXXX" — latest 5 Instagram posts
+  instagramPosts: []     // optional: specific post URLs instead
 };
 ```
 
-**Instagram.** Open a post on instagram.com, copy its address-bar URL (works for
+**Instagram — latest 5 posts, automatic.** Sign up free at [behold.so](https://behold.so), connect
+@lyonsbespoke, create a feed, and paste its feed URL into `beholdFeedUrl`. New posts then
+appear on the site on their own.
+
+**Instagram — hand-picked posts (alternative).** Open a post on instagram.com, copy its address-bar URL (works for
 `/p/…` posts and `/reel/…`), and add it to `instagramPosts`. They render with
 Instagram's official embed, no account or key needed. Add new URLs at the top to
 show your newest work first.
@@ -80,9 +76,6 @@ connect your Google Business Profile, set the widget's minimum rating to
 work: paste their snippet into the `data-reviews` div in `index.html`.) Until an id
 is set, the section shows a link to your Google reviews. Update the Google link in
 that section to your exact review URL once you have it.
-
-**Facebook — LIVE.** Meta's official Page Plugin shows your real posts using the
-page's numeric id (`61568991250123`); the `/people/…` URL does **not** work.
 
 ## Editing content
 
